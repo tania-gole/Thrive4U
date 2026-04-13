@@ -21,6 +21,7 @@ A clean, mobile-responsive 4-page website designed to establish a professional o
 | YouTube embed | Homepage intro video |
 
 ## Project Structure
+```
 thrive4u-webflow/
 ├── README.md
 ├── design/
@@ -29,7 +30,8 @@ thrive4u-webflow/
 │   ├── ga4-embed.html     # Google Analytics 4 measurement snippet
 │   └── custom-css.css     # Any custom styles injected into Webflow
 └── docs/
-└── handover-notes.md  # Client handover documentation
+    └── handover-notes.md  # Client handover documentation
+```
 
 ## Process
 1. Discovery call + content collection
