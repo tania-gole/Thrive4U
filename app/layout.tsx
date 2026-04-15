@@ -1,15 +1,35 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Thrive4U Coaching & Consulting",
-    template: "%s | Thrive4U",
-  },
+  title: "Thrive4U",
   description:
-    "Thrive4U Coaching & Consulting — life coaching with Sanah Singh Tomar. Practical guidance, grounded process, and meaningful change.",
+    "Thrive4U Coaching & Consulting — Sanah Singh Tomar, ICF Master Certified Coach (MCC) and EMCC Senior Practitioner. Partnering with women leaders, high potentials, and C-suite executives for real, measurable transformation.",
+  openGraph: {
+    title: "Thrive4U, Coaching & Consulting",
+    description:
+      "Sanah Singh Tomar — ICF Master Certified Coach. Coaching for women leaders, high potentials, and C-suite executives.",
+    siteName: "Thrive4U",
+    type: "website",
+    images: [
+      {
+        url: "/images/Logo.jpeg",
+        width: 325,
+        height: 415,
+        alt: "Thrive4U",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Thrive4U",
+    description:
+      "Sanah Singh Tomar — ICF Master Certified Coach. Coaching for women leaders, high potentials, and C-suite executives.",
+    images: ["/images/Logo.jpeg"],
+  },
 };
 
 export default function RootLayout({
@@ -21,8 +41,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
+        <ScrollReveal />
       </body>
     </html>
   );
