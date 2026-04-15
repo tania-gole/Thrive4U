@@ -488,8 +488,18 @@ section[id] { scroll-margin-top: 120px; }
   background: #F7F2E6;
   padding: 60px 0 70px;
   overflow: hidden;
+  /* Fills viewport below the nav (100vh - 120px nav) so the contact section
+     stays below the fold when the user is reading testimonials. */
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.test-head { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+.test-head {
+  max-width: 1200px; margin: 0 auto; padding: 0 60px;
+  text-align: left;
+  width: 100%;
+}
 .test-h2 {
   font-family: Georgia, serif;
   font-size: 40px; font-weight: 400; color: #1A1A1A;
@@ -567,7 +577,16 @@ section[id] { scroll-margin-top: 120px; }
 #contact {
   background: linear-gradient(160deg, #FFF9EE 0%, #FAFAF8 100%);
   padding: 70px 0;
+  /* Min-height ensures the section + footer fill the viewport when scrolled
+     to via the nav. Without it the browser can't push contact flush below
+     the nav (it's already at the document's max scroll), so testimonials
+     leaks in at the top. */
+  min-height: calc(100vh - 220px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.contact-inner { width: 100%; }
 .contact-inner {
   max-width: 700px; margin: 0 auto; padding: 0 60px; text-align: center;
 }
