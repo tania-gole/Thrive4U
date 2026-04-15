@@ -13,7 +13,21 @@ body {
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
+
+/* TEMP: external contact links (email / Instagram / LinkedIn) are visible but
+   non-interactive for now. To re-enable, delete this whole block. */
+a[href^="mailto:"],
+a[href^="tel:"],
+a[href*="instagram.com"],
+a[href*="linkedin.com"] {
+  pointer-events: none;
+  cursor: default;
+}
 section { width: 100%; }
+/* Offset anchor-link scrolling so the sticky nav doesn't cover section headings.
+   Value matches nav height exactly so the section sits flush below the nav with
+   no part of the previous section bleeding through. */
+section[id] { scroll-margin-top: 120px; }
 
 /* ── NAV ── */
 .nav {
@@ -85,6 +99,11 @@ section { width: 100%; }
     radial-gradient(ellipse at 75% 35%, rgba(255, 245, 170, 0.45) 0%, transparent 55%),
     radial-gradient(ellipse at 15% 85%, rgba(160, 85, 5, 0.2) 0%, transparent 45%);
   pointer-events: none;
+  animation: heroBreathe 14s ease-in-out infinite alternate;
+}
+@keyframes heroBreathe {
+  from { opacity: 0.85; transform: scale(1); }
+  to   { opacity: 1;    transform: scale(1.06); }
 }
 .hero-left {
   position: absolute; top: 0; left: 0;
@@ -169,6 +188,39 @@ section { width: 100%; }
   object-position: center top;
   border-radius: 16px;
   box-shadow: 0 30px 60px rgba(80, 30, 0, 0.25);
+  position: relative;
+  z-index: 2;
+}
+/* ── Hero entrance animation — staggered fade/slide on page load ── */
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroPhotoIn {
+  from { opacity: 0; transform: translateY(28px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.hero-eyebrow,
+.hero-h1,
+.hero-body,
+.hero-socials,
+.hero-buttons {
+  animation: heroIn 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+.hero-eyebrow { animation-delay: 0.05s; }
+.hero-h1      { animation-delay: 0.20s; }
+.hero-body    { animation-delay: 0.40s; }
+.hero-socials { animation-delay: 0.60s; }
+.hero-buttons { animation-delay: 0.75s; }
+.hero-photo {
+  animation:
+    heroPhotoIn 1.2s 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) both,
+    kenburns 18s 1.5s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow, .hero-h1, .hero-body, .hero-socials,
+  .hero-buttons, .hero-photo, #home::before { animation: none !important; }
 }
 
 /* ── ABOUT ── */
@@ -191,10 +243,10 @@ section { width: 100%; }
 .about-inner {
   position: relative; z-index: 2;
   max-width: 1200px; margin: 0 auto;
-  padding: 100px 60px;
+  padding: 80px 60px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
   align-items: center;
-  min-height: 600px;
+  min-height: 520px;
 }
 .sec-eyebrow {
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -235,7 +287,7 @@ section { width: 100%; }
 .btn-gold:hover { opacity: 0.88; }
 
 /* ── CREDENTIALS ── */
-#credentials { background: #FFFFFF; padding: 100px 0; }
+#credentials { background: #FFFFFF; padding: 70px 0; }
 .cred-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
 .cred-eyebrow { text-align: center; }
 .cred-h2 {
@@ -353,7 +405,7 @@ section { width: 100%; }
 /* ── PROCESS ── */
 #process {
   background: linear-gradient(180deg, #FFF9EE 0%, #FAFAF8 100%);
-  padding: 100px 0;
+  padding: 70px 0 40px;
 }
 .process-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px; width: 100%; }
 .process-head { text-align: center; margin-bottom: 16px; }
@@ -397,7 +449,7 @@ section { width: 100%; }
   padding: 36px 28px;
   display: flex; flex-direction: column; gap: 16px;
 }
-.pillar-thrive {
+.pillar-red {
   background: rgba(139, 26, 26, 0.06);
   border: 1.5px solid rgba(139, 26, 26, 0.18);
 }
@@ -430,8 +482,11 @@ section { width: 100%; }
 
 /* ── TESTIMONIALS ── */
 #testimonials {
-  background: #FAFAF8;
-  padding: 100px 0;
+  /* Slightly warmer cream than #FAFAF8 so the boundary with the process
+     section (which ends at #FAFAF8) is gently visible — without it the two
+     sections merge into one big void. */
+  background: #F7F2E6;
+  padding: 60px 0 70px;
   overflow: hidden;
 }
 .test-head { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
@@ -511,7 +566,7 @@ section { width: 100%; }
 /* ── CONTACT ── */
 #contact {
   background: linear-gradient(160deg, #FFF9EE 0%, #FAFAF8 100%);
-  padding: 100px 0;
+  padding: 70px 0;
 }
 .contact-inner {
   max-width: 700px; margin: 0 auto; padding: 0 60px; text-align: center;
@@ -604,23 +659,19 @@ section { width: 100%; }
 .js-ready .reveal:not(.is-visible),
 .js-ready .stagger:not(.is-visible) > * {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(40px);
 }
 .stagger.is-visible > *:nth-child(1) { transition-delay: 0s; }
-.stagger.is-visible > *:nth-child(2) { transition-delay: 0.1s; }
-.stagger.is-visible > *:nth-child(3) { transition-delay: 0.2s; }
-.stagger.is-visible > *:nth-child(4) { transition-delay: 0.3s; }
-.stagger.is-visible > *:nth-child(5) { transition-delay: 0.4s; }
+.stagger.is-visible > *:nth-child(2) { transition-delay: 0.12s; }
+.stagger.is-visible > *:nth-child(3) { transition-delay: 0.24s; }
+.stagger.is-visible > *:nth-child(4) { transition-delay: 0.36s; }
+.stagger.is-visible > *:nth-child(5) { transition-delay: 0.48s; }
 
 /* Slow Ken Burns on the hero photo */
 @keyframes kenburns {
   from { transform: scale(1); }
   to   { transform: scale(1.06); }
 }
-.hero-photo {
-  animation: kenburns 18s ease-in-out infinite alternate;
-}
-
 /* Subtle hover lift on cards */
 .cred-card-hero,
 .cred-card-sm,
@@ -676,6 +727,7 @@ section { width: 100%; }
 
 /* ───── Tablet portrait & small laptop (≤900px): stack hero, collapse grids ───── */
 @media (max-width: 900px) {
+  section[id] { scroll-margin-top: 90px; }
   .nav { padding: 0 24px; height: 90px; }
   .nav-logo img { width: 80px; height: 80px; }
   .nav-links { gap: 18px; }
@@ -695,10 +747,10 @@ section { width: 100%; }
   }
 
   /* SECTIONS — pull padding in */
-  #about, #credentials, #process, #testimonials, #contact { padding: 70px 0; }
+  #about, #credentials, #process, #testimonials, #contact { padding: 50px 0; }
   .about-inner {
     grid-template-columns: 1fr; gap: 24px;
-    padding: 70px 24px; min-height: 0;
+    padding: 50px 24px; min-height: 0;
   }
   .cred-inner, .process-inner, .test-head, .contact-inner { padding-left: 24px; padding-right: 24px; }
 
@@ -729,14 +781,15 @@ section { width: 100%; }
 
 /* ───── Phone (≤640px): tighter spacing, single-column pillars ───── */
 @media (max-width: 640px) {
+  section[id] { scroll-margin-top: 80px; }
   .nav { padding: 0 16px; height: 80px; }
   .nav-logo img { width: 64px; height: 64px; }
   .nav-links { gap: 12px; }
   .nav-links a { font-size: 9px; letter-spacing: 0.12em; }
 
   #home { padding-top: 90px; padding-bottom: 40px; }
-  #about, #credentials, #process, #testimonials, #contact { padding: 56px 0; }
-  .about-inner { padding: 56px 20px; }
+  #about, #credentials, #process, #testimonials, #contact { padding: 40px 0; }
+  .about-inner { padding: 40px 20px; }
   .cred-inner, .process-inner, .test-head, .contact-inner { padding-left: 20px; padding-right: 20px; }
 
   .hero-h1 { line-height: 1.15; }

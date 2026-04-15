@@ -31,18 +31,15 @@ export default function ScrollReveal() {
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+      // Trigger when ~15% of the element is visible from the bottom of viewport.
+      // Larger negative bottom margin = element must be more visible before
+      // animating, so the user actually sees the fade-up effect happen.
+      { threshold: 0.15, rootMargin: "0px 0px -120px 0px" }
     );
 
-    els.forEach((el) => {
-      // If an element is already in view at mount, reveal immediately.
-      const r = el.getBoundingClientRect();
-      if (r.top < window.innerHeight && r.bottom > 0) {
-        el.classList.add("is-visible");
-      } else {
-        obs.observe(el);
-      }
-    });
+    // Observe everything (don't auto-reveal in-view elements). The IO will
+    // fire immediately for anything already in view, triggering its animation.
+    els.forEach((el) => obs.observe(el));
 
     return () => {
       obs.disconnect();

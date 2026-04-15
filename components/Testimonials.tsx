@@ -124,7 +124,10 @@ export default function Testimonials() {
   }, []);
 
   const atStart = pos <= 0;
-  const atEnd = pos >= max;
+  // Only consider "at end" once the layout has actually been measured
+  // (max > 0). Before measurement, max defaults to 0 which would falsely
+  // mark every position as the end and hide the next-arrow on first render.
+  const atEnd = max > 0 && pos >= max;
 
   return (
     <section id="testimonials">

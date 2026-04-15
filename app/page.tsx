@@ -278,7 +278,7 @@ export default function HomePage() {
                 clarity and without judgement.
               </div>
             </div>
-            <div className="pillar">
+            <div className="pillar pillar-red">
               <div className="pillar-title">Root</div>
               <div className="pillar-body">
                 We go deep. Identifying your values, strengths, and the core
@@ -294,7 +294,7 @@ export default function HomePage() {
                 greater impact.
               </div>
             </div>
-            <div className="pillar pillar-thrive">
+            <div className="pillar pillar-red">
               <div className="pillar-title">Thrive</div>
               <div className="pillar-body">
                 We move. With clarity, confidence, and intention, you step
