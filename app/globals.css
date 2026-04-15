@@ -656,36 +656,112 @@ section { width: 100%; }
 }
 
 /* ── RESPONSIVE ── */
+/* ───── Fluid type — scale headings smoothly across viewports ───── */
+.hero-h1     { font-size: clamp(2rem, 5vw, 48px); }
+.about-h2    { font-size: clamp(1.75rem, 4vw, 40px); }
+.cred-h2     { font-size: clamp(1.6rem, 3.5vw, 36px); }
+.process-h2  { font-size: clamp(1.75rem, 4vw, 40px); }
+.test-h2     { font-size: clamp(1.75rem, 4vw, 40px); }
+.contact-h2  { font-size: clamp(1.75rem, 4vw, 40px); }
+
+/* ───── Tablet (≤1024px): keep desktop layout but tighten container padding ───── */
+@media (max-width: 1024px) {
+  .nav { padding: 0 32px; }
+  .about-inner,
+  .cred-inner,
+  .process-inner,
+  .test-head,
+  .contact-inner { padding-left: 32px; padding-right: 32px; }
+}
+
+/* ───── Tablet portrait & small laptop (≤900px): stack hero, collapse grids ───── */
 @media (max-width: 900px) {
   .nav { padding: 0 24px; height: 90px; }
   .nav-logo img { width: 80px; height: 80px; }
   .nav-links { gap: 18px; }
   .nav-links a { font-size: 10px; }
+
+  /* HERO: stack text + photo */
+  #home { height: auto; min-height: unset; padding-top: 100px; padding-bottom: 60px; }
   .hero-left, .hero-right {
     position: relative; width: 100%; height: auto;
     padding: 32px 24px;
   }
-  #home { height: auto; min-height: unset; padding-top: 100px; }
   .hero-left { justify-content: center; padding-top: 32px; }
   .hero-left-inner { padding: 0; }
-  .hero-h1 { font-size: 36px; }
-  .hero-photo { max-width: 100%; height: auto; }
+  .hero-photo {
+    max-width: 100%; height: auto;
+    max-height: 60vh;
+  }
+
+  /* SECTIONS — pull padding in */
+  #about, #credentials, #process, #testimonials, #contact { padding: 70px 0; }
   .about-inner {
     grid-template-columns: 1fr; gap: 24px;
-    padding: 80px 24px;
+    padding: 70px 24px; min-height: 0;
   }
-  .cred-inner, .process-inner, .test-head, .contact-inner { padding: 0 24px; }
-  .test-arrow { width: 40px; height: 40px; font-size: 16px; }
-  .test-arrow-left { left: 8px; }
-  .test-arrow-right { right: 8px; }
-  .cred-row-2, .cred-row-3 { grid-template-columns: 1fr; }
+  .cred-inner, .process-inner, .test-head, .contact-inner { padding-left: 24px; padding-right: 24px; }
+
+  /* CARDS / GRIDS */
+  .cred-row-2 { grid-template-columns: 1fr; }
+  .cred-row-3 { grid-template-columns: 1fr 1fr; }
+  .cred-card-hero { padding: 24px; gap: 20px; }
+  .cred-card-hero img { width: 100px; height: 100px; }
   .pillars { grid-template-columns: 1fr 1fr; }
-  .stats { gap: 28px; flex-wrap: wrap; }
+  .stats { gap: 32px; flex-wrap: wrap; padding: 16px 0 24px; margin-bottom: 24px; }
+  .stat-n { font-size: 36px; }
+
+  /* TESTIMONIALS — fluid card width */
+  .tcard { width: 84vw; max-width: 380px; padding: 26px; }
+  .test-track { gap: 16px; padding: 0 24px; }
+  .test-arrow { width: 40px; height: 40px; font-size: 16px; }
+  .test-arrow-left { left: 4px; }
+  .test-arrow-right { right: 4px; }
+
+  /* CTA */
+  .cta-box { padding: 36px 24px; }
+
+  /* FOOTER */
   .footer { padding: 20px 24px; grid-template-columns: 1fr; gap: 16px; justify-items: center; }
+  .footer-logo { justify-self: center; margin-left: 0; }
   .footer-copy { text-align: center; }
 }
-@media (max-width: 560px) {
+
+/* ───── Phone (≤640px): tighter spacing, single-column pillars ───── */
+@media (max-width: 640px) {
+  .nav { padding: 0 16px; height: 80px; }
+  .nav-logo img { width: 64px; height: 64px; }
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 9px; letter-spacing: 0.12em; }
+
+  #home { padding-top: 90px; padding-bottom: 40px; }
+  #about, #credentials, #process, #testimonials, #contact { padding: 56px 0; }
+  .about-inner { padding: 56px 20px; }
+  .cred-inner, .process-inner, .test-head, .contact-inner { padding-left: 20px; padding-right: 20px; }
+
+  .hero-h1 { line-height: 1.15; }
+  .hero-eyebrow { font-size: 13px; }
+  .hero-buttons { gap: 10px; }
+  .btn-primary, .btn-secondary { padding: 12px 22px; font-size: 12px; }
+
+  .cred-row-3 { grid-template-columns: 1fr; }
   .pillars { grid-template-columns: 1fr; }
-  .clients-track { gap: 32px; }
-  .clients-track img { height: 44px !important; }
+  .stats { gap: 24px; }
+  .stat-n { font-size: 32px; }
+
+  .cta-box { padding: 32px 20px; }
+  .cta-box h3 { font-size: 22px; }
+  .process-quote p { font-size: 17px; }
+}
+
+/* ───── Small phone (≤400px): smallest tweaks, ultra-tight nav ───── */
+@media (max-width: 400px) {
+  .nav { padding: 0 12px; }
+  .nav-logo img { width: 56px; height: 56px; }
+  .nav-links { gap: 8px; }
+  .nav-links a { font-size: 8px; letter-spacing: 0.08em; }
+  .hero-socials { gap: 10px; }
+  .stats { gap: 16px; }
+  .clients-track { gap: 28px; }
+  .clients-track img { height: 40px !important; }
 }
