@@ -92,12 +92,13 @@ section[id] { scroll-margin-top: 120px; }
   flex-direction: column;
   justify-content: center;
   gap: 5px;
+  margin-left: auto;
 }
 .hamburger span {
   display: block;
-  width: 22px;
-  height: 2px;
-  background: #5A3A10;
+  width: 24px;
+  height: 2.5px;
+  background: #C9900C;
   border-radius: 2px;
   transition: transform 0.3s, opacity 0.3s;
 }
@@ -833,7 +834,7 @@ section[id] { scroll-margin-top: 120px; }
 /* ───── Phone (≤640px): tighter spacing, single-column pillars ───── */
 @media (max-width: 640px) {
   section[id] { scroll-margin-top: 80px; }
-  .nav { padding: 0 16px; height: 80px; }
+  .nav { padding: 0 16px; height: 80px; justify-content: space-between; }
   .nav-logo img { width: 64px; height: 64px; }
 
   /* Hide desktop links, show hamburger */
