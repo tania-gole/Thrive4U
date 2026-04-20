@@ -46,9 +46,9 @@ export default function HomePage() {
           <div className="hero-left-inner">
             <span className="hero-eyebrow">Sanah Singh Tomar</span>
             <h1 className="hero-h1">
-              Guiding you to
+              Your transformation
               <br />
-              your best self.
+              partner.
             </h1>
             <p className="hero-body">
               ICF Master Certified Coach (MCC) and EMCC Senior Practitioner,
@@ -136,7 +136,7 @@ export default function HomePage() {
               is <em>unique.</em>
             </h2>
             <p className="about-p">
-              I started my career in hotel operations with the Oberoi Group,
+              I started my career as a hotelier with the Oberoi Group,
               learning early that people are at the heart of everything. That
               belief has never left me.
             </p>
@@ -220,8 +220,8 @@ export default function HomePage() {
               <div className="stat-l">Years</div>
             </div>
             <div className="stat">
-              <div className="stat-n">6,500+</div>
-              <div className="stat-l">Coached</div>
+              <div className="stat-n">6500+</div>
+              <div className="stat-l">Coached and Trained</div>
             </div>
             <div className="stat">
               <div className="stat-n">5,000+</div>
