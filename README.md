@@ -1,6 +1,6 @@
-# Thrive4U — Website
+# Thrive4U Website
 
-A professional website for Thrive4U Coaching & Consulting, built for life coach and consultant Sanah Singh Tomar.
+A professional website for Thrive4U Coaching & Consulting, built for executive coach and consultant Sanah Singh Tomar.
 
 ## Overview
 A clean, mobile-responsive 4-page site built with Next.js (App Router), deployed on Vercel. All content is managed directly in code — no CMS.
