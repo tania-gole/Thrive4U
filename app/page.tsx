@@ -148,8 +148,9 @@ export default function HomePage() {
             </p>
             <p className="about-p">
               My work goes beyond surface-level goals. I engage the whole
-              person, uncovering patterns, challenging thinking, building
-              behaviours that sustain performance in today&apos;s complex world.
+              person, working inside out, uncovering patterns, challenging
+              thinking, building behaviours that sustain performance in
+              today&apos;s complex world.
             </p>
             <a href="#contact" className="btn-gold">
               Work with me
