@@ -43,9 +43,14 @@ section[id] { scroll-margin-top: 120px; }
   align-items: center;
 }
 .nav-logo img {
-  width: 110px; height: 110px;
+  width: 130px; height: 130px;
   object-fit: contain;
   display: block;
+  /* The JPEG includes a "Thrive4U Coaching & Consulting" wordmark below the
+     icon that wastes ~25% of the visible area. Clip it so the icon itself
+     fills the slot and reads larger without resizing the nav. */
+  clip-path: inset(0 0 26% 0);
+  margin: -10px 0;
   mix-blend-mode: multiply;
 }
 .nav-links {
@@ -761,7 +766,7 @@ section[id] { scroll-margin-top: 120px; }
 @media (max-width: 900px) {
   section[id] { scroll-margin-top: 90px; }
   .nav { padding: 0 24px; height: 90px; }
-  .nav-logo img { width: 80px; height: 80px; }
+  .nav-logo img { width: 100px; height: 100px; margin: -10px 0; }
   .nav-links { gap: 18px; }
   .nav-links a { font-size: 10px; }
 
@@ -825,7 +830,7 @@ section[id] { scroll-margin-top: 120px; }
 @media (max-width: 640px) {
   section[id] { scroll-margin-top: 80px; }
   .nav { padding: 0 16px; height: 80px; justify-content: space-between; }
-  .nav-logo img { width: 64px; height: 64px; }
+  .nav-logo img { width: 84px; height: 84px; margin: -10px 0; }
 
   /* Hide desktop links, show hamburger */
   .nav-links { display: none; }
@@ -912,7 +917,7 @@ section[id] { scroll-margin-top: 120px; }
 /* ───── Small phone (≤400px): smallest tweaks ───── */
 @media (max-width: 400px) {
   .nav { padding: 0 12px; }
-  .nav-logo img { width: 56px; height: 56px; }
+  .nav-logo img { width: 74px; height: 74px; margin: -8px 0; }
   .hero-socials { gap: 10px; }
   .stats { gap: 16px; }
   .brand-cell img { height: 52px !important; max-width: 130px; }
