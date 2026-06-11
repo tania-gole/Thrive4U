@@ -9,7 +9,7 @@ const clientLogos = [
   { src: "/images/EY-Logo.jpg", alt: "EY" },
   { src: "/images/Accenture-Logo.png", alt: "Accenture" },
   { src: "/images/Pfizer-Logo.avif", alt: "Pfizer" },
-  { src: "/images/Pepsi-Logo.avif", alt: "Pepsi" },
+  { src: "/images/Pepsi-Logo.jpg", alt: "PepsiCo" },
   { src: "/images/Cisco-Logo.jpg", alt: "Cisco" },
   { src: "/images/Intel-Logo.svg", alt: "Intel" },
   { src: "/images/Dyson-Logo.png", alt: "Dyson" },
