@@ -408,13 +408,9 @@ section[id] { scroll-margin-top: 120px; }
   width: auto !important;
   max-width: 140px;
   object-fit: contain;
-  filter: grayscale(0.2);
-  opacity: 0.88;
-  transition: opacity 0.25s, filter 0.25s, transform 0.25s;
+  transition: transform 0.25s;
 }
 .brand-cell:hover img {
-  opacity: 1;
-  filter: grayscale(0);
   transform: translateY(-2px);
 }
 
