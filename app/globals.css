@@ -404,9 +404,9 @@ section[id] { scroll-margin-top: 120px; }
   padding: 12px;
 }
 .brand-cell img {
-  height: 56px !important;
+  height: 76px !important;
   width: auto !important;
-  max-width: 140px;
+  max-width: 180px;
   object-fit: contain;
   transition: transform 0.25s;
 }
@@ -882,7 +882,7 @@ section[id] { scroll-margin-top: 120px; }
   .about-inner { padding: 40px 20px; }
   .cred-inner, .brands-inner, .process-inner, .test-head, .contact-inner { padding-left: 20px; padding-right: 20px; }
   .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; }
-  .brand-cell img { height: 44px !important; }
+  .brand-cell img { height: 60px !important; max-width: 150px; }
 
   .hero-h1 { line-height: 1.2; white-space: normal; }
   .hero-eyebrow { white-space: normal; letter-spacing: 0.06em; }
@@ -915,5 +915,5 @@ section[id] { scroll-margin-top: 120px; }
   .nav-logo img { width: 56px; height: 56px; }
   .hero-socials { gap: 10px; }
   .stats { gap: 16px; }
-  .brand-cell img { height: 38px !important; }
+  .brand-cell img { height: 52px !important; max-width: 130px; }
 }
