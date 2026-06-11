@@ -3,7 +3,7 @@ import Testimonials from "@/components/Testimonials";
 
 const clientLogos = [
   { src: "/images/Google-Logo.webp", alt: "Google" },
-  { src: "/images/McKinsey-Logo.webp", alt: "McKinsey" },
+  { src: "/images/McKinsey-Logo.png", alt: "McKinsey" },
   { src: "/images/BCG-Logo.png", alt: "BCG" },
   { src: "/images/HSBC-Logo.png", alt: "HSBC" },
   { src: "/images/EY-Logo.jpg", alt: "EY" },
