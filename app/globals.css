@@ -14,12 +14,10 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 
-/* TEMP: external contact links (email / Instagram / LinkedIn) are visible but
-   non-interactive for now. To re-enable, delete this whole block. */
-a[href^="mailto:"],
-a[href^="tel:"],
-a[href*="instagram.com"],
-a[href*="linkedin.com"] {
+/* TEMP: Instagram link is visible but non-interactive until a profile URL
+   is provided. Remove this block once instagram.com is replaced with the
+   real handle. */
+a[href="https://www.instagram.com"] {
   pointer-events: none;
   cursor: default;
 }
