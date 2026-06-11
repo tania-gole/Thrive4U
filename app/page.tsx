@@ -45,15 +45,12 @@ export default function HomePage() {
         <div className="hero-left">
           <div className="hero-left-inner">
             <span className="hero-eyebrow">Sanah Singh Tomar</span>
-            <h1 className="hero-h1">
-              Your transformation
-              <br />
-              partner.
-            </h1>
+            <h1 className="hero-h1">Your transformation partner.</h1>
             <p className="hero-body">
               ICF Master Certified Coach (MCC) and EMCC Senior Practitioner,
-              partnering with women leaders, high potentials, and C-suite
-              executives for real, measurable transformation.
+              partnering with leaders, high potentials and c-suite execs to
+              create meaningful and measurable transformation &mdash; with a
+              special passion for advocating women in leadership.
             </p>
 
             <div className="hero-socials">
@@ -136,9 +133,9 @@ export default function HomePage() {
               is <em>unique.</em>
             </h2>
             <p className="about-p">
-              I started my career as a hotelier with the Oberoi Group,
-              learning early that people are at the heart of everything. That
-              belief has never left me.
+              I started my career as a business leader, learning early that
+              people are at the heart of everything. That belief has never
+              left me.
             </p>
             <p className="about-p">
               Over 25 years, I&apos;ve worked across HR, training, coaching and
@@ -150,7 +147,7 @@ export default function HomePage() {
               My work goes beyond surface-level goals. I engage the whole
               person, working inside out, uncovering patterns, challenging
               thinking, building behaviours that sustain performance in
-              today&apos;s complex world.
+              today&apos;s rapidly changing and complex world.
             </p>
             <a href="#contact" className="btn-gold">
               Work with me
@@ -229,23 +226,27 @@ export default function HomePage() {
               <div className="stat-l">Hours</div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div>
-            <span className="clients-label">Trusted by professionals at</span>
-            <div className="clients-marquee">
-              <div className="clients-track">
-                {[...clientLogos, ...clientLogos].map((l, i) => (
-                  <Image
-                    key={`${l.alt}-${i}`}
-                    src={l.src}
-                    alt={l.alt}
-                    width={140}
-                    height={56}
-                    style={{ objectFit: "contain" }}
-                  />
-                ))}
+      {/* BRANDS */}
+      <section id="brands">
+        <div className="brands-inner">
+          <span className="sec-eyebrow brands-eyebrow reveal">
+            Trusted by professionals at
+          </span>
+          <div className="brands-grid stagger">
+            {clientLogos.map((l) => (
+              <div className="brand-cell" key={l.alt}>
+                <Image
+                  src={l.src}
+                  alt={l.alt}
+                  width={140}
+                  height={56}
+                  style={{ objectFit: "contain" }}
+                />
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
