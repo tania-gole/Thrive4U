@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-logo">
-        <Image src="/images/Logo.jpeg" alt="Thrive4U" width={56} height={56} />
+        <Image src="/images/Logo.png" alt="Thrive4U" width={56} height={56} />
       </div>
 
       <div className="footer-socials">

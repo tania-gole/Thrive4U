@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/Logo.jpeg",
+        url: "/images/Logo.png",
         width: 325,
         height: 415,
         alt: "Thrive4U",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Thrive4U",
     description:
       "Sanah Singh Tomar — ICF Master Certified Coach. Coaching for women leaders, high potentials, and C-suite executives.",
-    images: ["/images/Logo.jpeg"],
+    images: ["/images/Logo.png"],
   },
 };
 

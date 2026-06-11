@@ -51,15 +51,12 @@ section[id] { scroll-margin-top: 120px; }
   width: 180px; height: 180px;
   object-fit: contain;
   display: block;
-  /* The JPEG includes a "Thrive4U Coaching & Consulting" wordmark below the
-     icon that wastes ~25% of the visible area. Clip it so the icon itself
-     fills the slot. */
+  /* The PNG includes a "Thrive4U Coaching & Consulting" wordmark below the
+     icon. Clip it so the icon itself fills the slot. */
   clip-path: inset(0 0 26% 0);
-  /* Negative margins let the logo render bigger than the nav slot. Since
-     the nav is transparent over the hero, the logo bleeds naturally onto
-     the gradient. */
+  /* Negative margins let the logo render bigger than the nav slot without
+     pushing the nav height. */
   margin: -30px 0;
-  mix-blend-mode: multiply;
 }
 .nav-links {
   display: flex;
@@ -448,11 +445,7 @@ section[id] { scroll-margin-top: 120px; }
   width: 320px !important;
   height: auto !important;
   display: block;
-  mix-blend-mode: multiply;
-  /* Crop the bottom ~28% (the "Thrive4U coaching & consulting" wordmark)
-     using clip-path so the image stays in the same stacking context as the
-     section background — preserves the multiply blend that overflow:hidden
-     would otherwise break. */
+  /* Crop the bottom ~28% (the "Thrive4U coaching & consulting" wordmark). */
   clip-path: inset(0 0 28% 0);
   /* Negative margin compensates for the empty space the clipped region
      would otherwise leave below the visible icon. */
@@ -681,7 +674,6 @@ section[id] { scroll-margin-top: 120px; }
 .footer-logo img {
   width: 64px; height: 64px;
   object-fit: contain;
-  mix-blend-mode: multiply;
 }
 .footer-copy {
   font-family: 'Helvetica Neue', Arial, sans-serif;

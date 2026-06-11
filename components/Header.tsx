@@ -25,7 +25,7 @@ export default function Header() {
     <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
       <a href="#home" className="nav-logo" aria-label="Thrive4U home">
         <Image
-          src="/images/Logo.jpeg"
+          src="/images/Logo.png"
           alt="Thrive4U"
           width={90}
           height={90}
