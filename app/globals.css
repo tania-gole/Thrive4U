@@ -43,15 +43,9 @@ section[id] { scroll-margin-top: 120px; }
   align-items: center;
 }
 .nav-logo img {
-  width: 150px; height: 150px;
+  width: 130px; height: 130px;
   object-fit: contain;
   display: block;
-  /* The PNG includes a "Thrive4U Coaching & Consulting" wordmark below the
-     icon. Clip it so the icon itself fills the slot and reads larger. */
-  clip-path: inset(0 0 26% 0);
-  /* Modest negative margin keeps the layout slot the same as the original
-     so the nav height stays at 120px. */
-  margin: -15px 0;
 }
 .nav-links {
   display: flex;
@@ -440,16 +434,10 @@ section[id] { scroll-margin-top: 120px; }
   width: 320px !important;
   height: auto !important;
   display: block;
-  /* Crop the bottom ~28% (the "Thrive4U coaching & consulting" wordmark). */
-  clip-path: inset(0 0 28% 0);
-  /* Negative margin compensates for the empty space the clipped region
-     would otherwise leave below the visible icon. */
-  margin-bottom: -113px;
 }
 @media (max-width: 560px) {
   .process-logo-img {
     width: 220px !important;
-    margin-bottom: -78px;
   }
 }
 .pillars {
@@ -761,7 +749,7 @@ section[id] { scroll-margin-top: 120px; }
 @media (max-width: 900px) {
   section[id] { scroll-margin-top: 90px; }
   .nav { padding: 0 24px; height: 90px; }
-  .nav-logo img { width: 115px; height: 115px; margin: -12px 0; }
+  .nav-logo img { width: 96px; height: 96px; }
   .nav-links { gap: 18px; }
   .nav-links a { font-size: 10px; }
 
@@ -825,7 +813,7 @@ section[id] { scroll-margin-top: 120px; }
 @media (max-width: 640px) {
   section[id] { scroll-margin-top: 80px; }
   .nav { padding: 0 16px; height: 80px; justify-content: space-between; }
-  .nav-logo img { width: 96px; height: 96px; margin: -10px 0; }
+  .nav-logo img { width: 86px; height: 86px; }
 
   /* Hide desktop links, show hamburger */
   .nav-links { display: none; }
@@ -912,7 +900,7 @@ section[id] { scroll-margin-top: 120px; }
 /* ───── Small phone (≤400px): smallest tweaks ───── */
 @media (max-width: 400px) {
   .nav { padding: 0 12px; }
-  .nav-logo img { width: 84px; height: 84px; margin: -8px 0; }
+  .nav-logo img { width: 80px; height: 80px; }
   .hero-socials { gap: 10px; }
   .stats { gap: 16px; }
   .brand-cell img { height: 52px !important; max-width: 130px; }
