@@ -373,8 +373,7 @@ section[id] { scroll-margin-top: 120px; }
 /* Stats */
 .stats {
   display: flex; justify-content: center; gap: 60px;
-  padding: 20px 0 40px 0;
-  margin-bottom: 40px;
+  padding: 20px 0 0 0;
 }
 .stat { text-align: center; }
 .stat-n {
@@ -391,9 +390,9 @@ section[id] { scroll-margin-top: 120px; }
 }
 
 /* ── BRANDS ── */
-#brands { background: #FFFFFF; padding: 40px 0 80px; }
+#brands { background: #FFFFFF; padding: 0 0 70px; }
 .brands-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px; text-align: center; }
-.brands-eyebrow { text-align: center; margin-bottom: 40px; }
+.brands-eyebrow { text-align: center; margin-bottom: 32px; }
 .brands-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
