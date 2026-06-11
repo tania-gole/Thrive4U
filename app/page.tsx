@@ -263,7 +263,7 @@ export default function HomePage() {
 
           <div className="process-logo">
             <Image
-              src="/images/Logo-Icon.png"
+              src="/images/Logo.png"
               alt="Thrive4U"
               width={325}
               height={415}
