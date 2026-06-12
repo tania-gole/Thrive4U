@@ -34,15 +34,15 @@ section[id] { scroll-margin-top: 170px; }
   display: flex;
   align-items: center;
   padding: 0 60px;
-  background: transparent;
-  border-bottom: none;
-  /* Applying multiply on the nav itself (the stacking-context root) makes
-     it blend with the elements behind it in the body — so the JPEG logo's
-     white background multiplies away against the hero gradient instead of
-     showing as a solid rectangle. */
-  mix-blend-mode: multiply;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border-bottom: 0.5px solid rgba(201, 144, 12, 0.15);
 }
-.nav.scrolled { background: transparent; }
+.nav.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 0.5px solid rgba(201, 144, 12, 0.25);
+}
 .nav-logo {
   display: flex;
   align-items: center;
