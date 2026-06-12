@@ -25,25 +25,26 @@ section { width: 100%; }
 /* Offset anchor-link scrolling so the sticky nav doesn't cover section headings.
    Value matches nav height exactly so the section sits flush below the nav with
    no part of the previous section bleeding through. */
-section[id] { scroll-margin-top: 120px; }
+section[id] { scroll-margin-top: 170px; }
 
 /* ── NAV ── */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  height: 120px;
+  height: 170px;
   display: flex;
   align-items: center;
   padding: 0 60px;
-  background: #FFFFFF;
-  border-bottom: 0.5px solid rgba(201, 144, 12, 0.15);
+  background: transparent;
+  border-bottom: none;
 }
-.nav.scrolled { border-bottom: 0.5px solid rgba(201, 144, 12, 0.25); }
+.nav.scrolled { background: transparent; }
 .nav-logo {
   display: flex;
   align-items: center;
 }
 .nav-logo img {
-  width: 130px; height: 130px;
+  height: 150px;
+  width: auto;
   object-fit: contain;
   display: block;
 }
@@ -139,7 +140,7 @@ section[id] { scroll-margin-top: 120px; }
   position: absolute; top: 0; left: 0;
   width: 50%; height: 100%;
   display: flex; align-items: center; justify-content: flex-end;
-  padding-top: 120px;
+  padding-top: 170px;
   z-index: 2;
 }
 .hero-left-inner { padding: 0 40px 0 60px; max-width: 560px; width: 100%; }
@@ -212,7 +213,7 @@ section[id] { scroll-margin-top: 120px; }
   position: absolute; top: 0; right: 0;
   width: 50%; height: 100%;
   display: flex; align-items: center; justify-content: flex-start;
-  padding-top: 140px; padding-right: 60px; padding-left: 20px;
+  padding-top: 180px; padding-right: 60px; padding-left: 20px;
   z-index: 2;
 }
 .hero-photo {
@@ -747,14 +748,14 @@ section[id] { scroll-margin-top: 120px; }
 
 /* ───── Tablet portrait & small laptop (≤900px): stack hero, collapse grids ───── */
 @media (max-width: 900px) {
-  section[id] { scroll-margin-top: 90px; }
-  .nav { padding: 0 24px; height: 90px; }
-  .nav-logo img { width: 96px; height: 96px; }
+  section[id] { scroll-margin-top: 130px; }
+  .nav { padding: 0 24px; height: 130px; }
+  .nav-logo img { height: 110px; width: auto; }
   .nav-links { gap: 18px; }
   .nav-links a { font-size: 10px; }
 
   /* HERO: stack text + photo */
-  #home { height: auto; min-height: unset; padding-top: 100px; padding-bottom: 60px; }
+  #home { height: auto; min-height: unset; padding-top: 140px; padding-bottom: 60px; }
   .hero-left, .hero-right {
     position: relative; width: 100%; height: auto;
     padding: 32px 24px;
@@ -811,9 +812,9 @@ section[id] { scroll-margin-top: 120px; }
 
 /* ───── Phone (≤640px): tighter spacing, single-column pillars ───── */
 @media (max-width: 640px) {
-  section[id] { scroll-margin-top: 80px; }
-  .nav { padding: 0 16px; height: 80px; justify-content: space-between; }
-  .nav-logo img { width: 86px; height: 86px; }
+  section[id] { scroll-margin-top: 110px; }
+  .nav { padding: 0 16px; height: 110px; justify-content: space-between; }
+  .nav-logo img { height: 92px; width: auto; }
 
   /* Hide desktop links, show hamburger */
   .nav-links { display: none; }
@@ -838,7 +839,7 @@ section[id] { scroll-margin-top: 120px; }
     height: 100dvh;
     background: #FFFFFF;
     z-index: 200;
-    padding: 100px 32px 40px;
+    padding: 130px 32px 40px;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
@@ -865,7 +866,7 @@ section[id] { scroll-margin-top: 120px; }
   }
   .mobile-drawer a:hover { color: #C9900C; }
 
-  #home { padding-top: 90px; padding-bottom: 40px; }
+  #home { padding-top: 120px; padding-bottom: 40px; }
   #about, #credentials, #brands, #process, #testimonials, #contact { padding: 40px 0; }
   .about-inner { padding: 40px 20px; }
   .cred-inner, .brands-inner, .process-inner, .test-head, .contact-inner { padding-left: 20px; padding-right: 20px; }
@@ -900,7 +901,7 @@ section[id] { scroll-margin-top: 120px; }
 /* ───── Small phone (≤400px): smallest tweaks ───── */
 @media (max-width: 400px) {
   .nav { padding: 0 12px; }
-  .nav-logo img { width: 80px; height: 80px; }
+  .nav-logo img { height: 82px; width: auto; }
   .hero-socials { gap: 10px; }
   .stats { gap: 16px; }
   .brand-cell img { height: 52px !important; max-width: 130px; }
