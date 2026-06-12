@@ -4,14 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
@@ -22,7 +15,7 @@ export default function Header() {
 
   return (
     <>
-      <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
+      <nav className="nav">
         <a href="#home" className="nav-logo" aria-label="Thrive4U home">
           <Image
             src="/images/Logo.jpeg"
