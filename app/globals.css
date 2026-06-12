@@ -318,6 +318,73 @@ section[id] { scroll-margin-top: 170px; }
 }
 .btn-gold:hover { opacity: 0.88; }
 
+/* ── THE WHOLE PERSON ── */
+#whole-person {
+  background: linear-gradient(180deg, #FFF9EE 0%, #FAFAF8 100%);
+  padding: 80px 0;
+}
+.wp-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+  text-align: center;
+}
+.wp-eyebrow { text-align: center; }
+.wp-h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(1.75rem, 4vw, 40px);
+  font-weight: 400;
+  color: #1A1A1A;
+  margin-bottom: 52px;
+}
+.wp-h2 em { color: #C9900C; font-style: normal; }
+.wp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+.wp-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(201, 144, 12, 0.18);
+  border-radius: 16px;
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.wp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(80, 30, 0, 0.10);
+}
+.wp-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(201, 144, 12, 0.10);
+  color: #C9900C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+.wp-title {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #1A1A1A;
+}
+.wp-body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #6B5B3E;
+}
+
 /* ── CREDENTIALS ── */
 #credentials { background: #FFFFFF; padding: 70px 0; }
 .cred-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
@@ -766,12 +833,13 @@ section[id] { scroll-margin-top: 170px; }
   }
 
   /* SECTIONS — pull padding in */
-  #about, #credentials, #brands, #process, #testimonials, #contact { padding: 50px 0; }
+  #about, #whole-person, #credentials, #brands, #process, #testimonials, #contact { padding: 50px 0; }
   .about-inner {
     grid-template-columns: 1fr; gap: 24px;
     padding: 50px 24px; min-height: 0;
   }
-  .cred-inner, .brands-inner, .process-inner, .test-head, .contact-inner { padding-left: 24px; padding-right: 24px; }
+  .cred-inner, .wp-inner, .brands-inner, .process-inner, .test-head, .contact-inner { padding-left: 24px; padding-right: 24px; }
+  .wp-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
 
   /* BRANDS — 3 cols on tablet */
   .brands-grid { grid-template-columns: repeat(3, 1fr); gap: 32px 24px; }
@@ -862,9 +930,11 @@ section[id] { scroll-margin-top: 170px; }
   .mobile-drawer a:hover { color: #C9900C; }
 
   #home { padding-top: 120px; padding-bottom: 40px; }
-  #about, #credentials, #brands, #process, #testimonials, #contact { padding: 40px 0; }
+  #about, #whole-person, #credentials, #brands, #process, #testimonials, #contact { padding: 40px 0; }
   .about-inner { padding: 40px 20px; }
-  .cred-inner, .brands-inner, .process-inner, .test-head, .contact-inner { padding-left: 20px; padding-right: 20px; }
+  .cred-inner, .wp-inner, .brands-inner, .process-inner, .test-head, .contact-inner { padding-left: 20px; padding-right: 20px; }
+  .wp-grid { grid-template-columns: 1fr; gap: 14px; }
+  .wp-card { padding: 28px 20px; }
   .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; }
   .brand-cell img { height: 60px !important; max-width: 150px; }
 

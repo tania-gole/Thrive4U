@@ -157,6 +157,72 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* THE WHOLE PERSON */}
+      <section id="whole-person">
+        <div className="wp-inner">
+          <span className="sec-eyebrow wp-eyebrow reveal">A fuller picture</span>
+          <h2 className="wp-h2 reveal">
+            The <em>whole person</em>
+          </h2>
+
+          <div className="wp-grid stagger">
+            <div className="wp-card">
+              <div className="wp-icon" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2c-2 3-3 6-3 9 0 3 1 6 3 8 2-2 3-5 3-8 0-3-1-6-3-9z" />
+                  <path d="M3 12c2 1 5 2 7 2M21 12c-2 1-5 2-7 2" />
+                </svg>
+              </div>
+              <div className="wp-title">Wellness in Practice</div>
+              <div className="wp-body">
+                Living what she teaches — yoga, meditation, and mindful
+                nutrition are daily rituals, not professional talking points.
+              </div>
+            </div>
+
+            <div className="wp-card">
+              <div className="wp-icon" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+              </div>
+              <div className="wp-title">Service &amp; Community</div>
+              <div className="wp-body">
+                Pro bono coaching for emerging leaders and active advocacy
+                for women in the workforce.
+              </div>
+            </div>
+
+            <div className="wp-card">
+              <div className="wp-icon" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 20l5.5-10 4 7 3-5L21 20H3z" />
+                  <circle cx="9" cy="6" r="1.5" />
+                </svg>
+              </div>
+              <div className="wp-title">Mountains &amp; Movement</div>
+              <div className="wp-body">
+                Twenty-plus treks across the Himalayas — perspective and
+                resilience earned at altitude.
+              </div>
+            </div>
+
+            <div className="wp-card">
+              <div className="wp-icon" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2l2.39 6.96L22 10l-5.5 4.99L18 22l-6-3.6L6 22l1.5-7.01L2 10l7.61-1.04L12 2z" />
+                </svg>
+              </div>
+              <div className="wp-title">Founder of Thrive4U</div>
+              <div className="wp-body">
+                Built a global coaching practice from the ground up, navigating
+                the same complexity her clients face every day.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CREDENTIALS */}
       <section id="credentials">
         <div className="cred-inner">
