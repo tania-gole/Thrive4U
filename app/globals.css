@@ -48,69 +48,6 @@ section[id] { scroll-margin-top: 170px; }
   object-fit: contain;
   display: block;
 }
-.nav-links {
-  display: flex;
-  justify-content: flex-end;
-  gap: 40px;
-  list-style: none;
-  flex: 1;
-}
-.nav-links a {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #5A3A10;
-  transition: color 0.2s;
-}
-.nav-links a:hover { color: #C9900C; }
-.btn-nav {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  padding: 10px 22px;
-  border-radius: 6px;
-  border: none;
-  background: linear-gradient(135deg, #D4970E, #C9900C);
-  color: #fff;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-.btn-nav:hover { opacity: 0.88; }
-
-/* ── HAMBURGER (hidden on desktop) ── */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  z-index: 210;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  margin-left: auto;
-}
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2.5px;
-  background: #C9900C;
-  border-radius: 2px;
-  transition: transform 0.3s, opacity 0.3s;
-}
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* ── MOBILE OVERLAY + DRAWER (hidden on desktop) ── */
-.mobile-overlay {
-  display: none;
-}
-.mobile-drawer {
-  display: none;
-}
 
 /* ── HERO ── */
 #home {
@@ -751,8 +688,6 @@ section[id] { scroll-margin-top: 170px; }
   section[id] { scroll-margin-top: 130px; }
   .nav { padding: 0 24px; height: 130px; }
   .nav-logo img { height: 110px; width: auto; }
-  .nav-links { gap: 18px; }
-  .nav-links a { font-size: 10px; }
 
   /* HERO: stack text + photo */
   #home { height: auto; min-height: unset; padding-top: 140px; padding-bottom: 60px; }
@@ -813,58 +748,8 @@ section[id] { scroll-margin-top: 170px; }
 /* ───── Phone (≤640px): tighter spacing, single-column pillars ───── */
 @media (max-width: 640px) {
   section[id] { scroll-margin-top: 110px; }
-  .nav { padding: 0 16px; height: 110px; justify-content: space-between; }
+  .nav { padding: 0 16px; height: 110px; }
   .nav-logo img { height: 92px; width: auto; }
-
-  /* Hide desktop links, show hamburger */
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-
-  /* Overlay */
-  .mobile-overlay {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 190;
-  }
-
-  /* Slide-in drawer */
-  .mobile-drawer {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 260px;
-    height: 100dvh;
-    background: #FFFFFF;
-    z-index: 200;
-    padding: 130px 32px 40px;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
-  }
-  .mobile-drawer.open {
-    transform: translateX(0);
-  }
-  .mobile-drawer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-  }
-  .mobile-drawer a {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #5A3A10;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .mobile-drawer a:hover { color: #C9900C; }
 
   #home { padding-top: 120px; padding-bottom: 40px; }
   #about, #credentials, #brands, #process, #testimonials, #contact { padding: 40px 0; }
