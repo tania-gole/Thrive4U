@@ -34,15 +34,10 @@ section[id] { scroll-margin-top: 170px; }
   display: flex;
   align-items: center;
   padding: 0 60px;
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(18px) saturate(180%);
-  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  background: #FFFFFF;
   border-bottom: 0.5px solid rgba(201, 144, 12, 0.15);
 }
-.nav.scrolled {
-  background: rgba(255, 255, 255, 0.9);
-  border-bottom: 0.5px solid rgba(201, 144, 12, 0.25);
-}
+.nav.scrolled { border-bottom: 0.5px solid rgba(201, 144, 12, 0.25); }
 .nav-logo {
   display: flex;
   align-items: center;
