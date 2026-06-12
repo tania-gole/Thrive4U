@@ -12,10 +12,10 @@ export default function Header() {
     if (!hero) return;
     const observer = new IntersectionObserver(
       ([entry]) => setScrolled(!entry.isIntersecting),
-      // Shrink the top of the observation area by ~18% of the viewport so
-      // the hero is treated as "out" once it's behind the fixed nav (which
-      // is up to ~170px on desktop, ~130 on tablet, ~110 on phone).
-      { threshold: 0, rootMargin: "-18% 0px 0px 0px" }
+      // Treat the hero as "out" once less than half of it is in view, so
+      // the nav flips to white well before the smooth-scroll to a section
+      // link completes.
+      { threshold: 0, rootMargin: "-55% 0px 0px 0px" }
     );
     observer.observe(hero);
     return () => observer.disconnect();
