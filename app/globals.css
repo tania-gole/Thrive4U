@@ -36,6 +36,11 @@ section[id] { scroll-margin-top: 170px; }
   padding: 0 60px;
   background: transparent;
   border-bottom: none;
+  /* Applying multiply on the nav itself (the stacking-context root) makes
+     it blend with the elements behind it in the body — so the JPEG logo's
+     white background multiplies away against the hero gradient instead of
+     showing as a solid rectangle. */
+  mix-blend-mode: multiply;
 }
 .nav.scrolled { background: transparent; }
 .nav-logo {
