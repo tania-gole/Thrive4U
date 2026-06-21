@@ -145,7 +145,6 @@ section[id] { scroll-margin-top: 170px; }
   color: rgba(55, 18, 0, 0.88);
   display: block;
   margin-bottom: 14px;
-  white-space: nowrap;
   line-height: 1.05;
 }
 .hero-h1 {
@@ -156,7 +155,6 @@ section[id] { scroll-margin-top: 170px; }
   line-height: 1.15;
   color: #7B1A1A;
   margin-bottom: 22px;
-  white-space: nowrap;
 }
 .hero-body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
