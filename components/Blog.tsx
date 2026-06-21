@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 
 type Post = {
@@ -133,27 +133,140 @@ const PAGE_SIZE = 2;
 
 export default function Blog() {
   const [page, setPage] = useState(0);
+  const [active, setActive] = useState<Post | null>(null);
   const totalPages = Math.ceil(posts.length / PAGE_SIZE);
   const visible = posts.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
 
-  return (
-    <section id="blog">
-      <div className="blog-inner">
-        <span className="sec-eyebrow blog-eyebrow reveal">From the journal</span>
-        <h2 className="blog-h2 reveal">
-          Notes on <em>coaching &amp; growth</em>
-        </h2>
+  const close = useCallback(() => setActive(null), []);
 
-        <div className="blog-grid" key={page}>
-          {visible.map((p) => (
-            <article className="blog-card" key={p.id}>
-              <header className="blog-head">
+  useEffect(() => {
+    if (!active) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [active, close]);
+
+  return (
+    <>
+      <section id="blog">
+        <div className="blog-inner">
+          <span className="sec-eyebrow blog-eyebrow reveal">From the journal</span>
+          <h2 className="blog-h2 reveal">
+            Notes on <em>coaching &amp; growth</em>
+          </h2>
+
+          <div className="blog-grid" key={page}>
+            {visible.map((p) => (
+              <button
+                type="button"
+                className="blog-card"
+                key={p.id}
+                onClick={() => setActive(p)}
+                aria-label={`Read full post from ${p.date}`}
+              >
+                <header className="blog-head">
+                  <div className="blog-avatar">
+                    <Image
+                      src="/images/Headshot-Sanah.jpg"
+                      alt="Sanah Singh Tomar"
+                      width={48}
+                      height={48}
+                    />
+                  </div>
+                  <div className="blog-meta">
+                    <div className="blog-name">Sanah Singh Tomar</div>
+                    <div className="blog-role">
+                      Executive Growth Coach · ICF-MCC · EMCC Senior Practitioner
+                    </div>
+                    <div className="blog-date">{p.date}</div>
+                  </div>
+                </header>
+
+                {p.image && (
+                  <div className="blog-image">
+                    <Image
+                      src={p.image}
+                      alt=""
+                      width={800}
+                      height={500}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                    />
+                  </div>
+                )}
+
+                <div className="blog-body">{renderBody(p.body)}</div>
+                <span className="blog-read-more">Read more →</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="blog-nav">
+            <button
+              type="button"
+              className="blog-nav-btn"
+              onClick={() => setPage((p) => Math.max(0, p - 1))}
+              disabled={page === 0}
+              aria-label="Previous posts"
+            >
+              ← Previous
+            </button>
+            <div className="blog-dots" aria-hidden="true">
+              {Array.from({ length: totalPages }).map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  className={`blog-dot${i === page ? " is-active" : ""}`}
+                  onClick={() => setPage(i)}
+                  aria-label={`Go to page ${i + 1}`}
+                />
+              ))}
+            </div>
+            <button
+              type="button"
+              className="blog-nav-btn"
+              onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+              disabled={page === totalPages - 1}
+              aria-label="Next posts"
+            >
+              Next →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {active && (
+        <div
+          className="blog-modal-overlay"
+          onClick={close}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Blog post"
+        >
+          <div className="blog-modal" onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className="blog-modal-close"
+              onClick={close}
+              aria-label="Close"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <path d="M6 6l12 12M18 6L6 18" />
+              </svg>
+            </button>
+            <div className="blog-modal-content">
+              <header className="blog-head blog-modal-head">
                 <div className="blog-avatar">
                   <Image
                     src="/images/Headshot-Sanah.jpg"
                     alt="Sanah Singh Tomar"
-                    width={48}
-                    height={48}
+                    width={56}
+                    height={56}
                   />
                 </div>
                 <div className="blog-meta">
@@ -161,59 +274,27 @@ export default function Blog() {
                   <div className="blog-role">
                     Executive Growth Coach · ICF-MCC · EMCC Senior Practitioner
                   </div>
-                  <div className="blog-date">{p.date}</div>
+                  <div className="blog-date">{active.date}</div>
                 </div>
               </header>
 
-              {p.image && (
-                <div className="blog-image">
+              {active.image && (
+                <div className="blog-modal-image">
                   <Image
-                    src={p.image}
+                    src={active.image}
                     alt=""
-                    width={800}
-                    height={500}
-                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                    width={1200}
+                    height={800}
+                    style={{ width: "100%", height: "auto", display: "block" }}
                   />
                 </div>
               )}
 
-              <div className="blog-body">{renderBody(p.body)}</div>
-            </article>
-          ))}
-        </div>
-
-        <div className="blog-nav">
-          <button
-            type="button"
-            className="blog-nav-btn"
-            onClick={() => setPage((p) => Math.max(0, p - 1))}
-            disabled={page === 0}
-            aria-label="Previous posts"
-          >
-            ← Previous
-          </button>
-          <div className="blog-dots" aria-hidden="true">
-            {Array.from({ length: totalPages }).map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                className={`blog-dot${i === page ? " is-active" : ""}`}
-                onClick={() => setPage(i)}
-                aria-label={`Go to page ${i + 1}`}
-              />
-            ))}
+              <div className="blog-modal-body">{renderBody(active.body)}</div>
+            </div>
           </div>
-          <button
-            type="button"
-            className="blog-nav-btn"
-            onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
-            disabled={page === totalPages - 1}
-            aria-label="Next posts"
-          >
-            Next →
-          </button>
         </div>
-      </div>
-    </section>
+      )}
+    </>
   );
 }
