@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Blog from "@/components/Blog";
 import Testimonials from "@/components/Testimonials";
 import WholePerson from "@/components/WholePerson";
 
@@ -326,6 +327,9 @@ export default function HomePage() {
 
       {/* TESTIMONIALS */}
       <Testimonials />
+
+      {/* BLOG */}
+      <Blog />
 
       {/* CONTACT */}
       <section id="contact">
