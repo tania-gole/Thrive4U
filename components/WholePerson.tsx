@@ -22,13 +22,8 @@ const pillars: Pillar[] = [
         <path d="M3 12c2 1 5 2 7 2M21 12c-2 1-5 2-7 2" />
       </svg>
     ),
-    blurb: (
-      <>
-        <strong>I don’t simply teach wellbeing. I live it.</strong>
-        <br />
-        Through yoga, meditation, mindful breathing, and conscious nutrition, I create the balance, energy, and clarity that ground me every day.
-      </>
-    ),
+    blurb:
+      "Through yoga, meditation, mindful breathing, and conscious nutrition, I create the balance, energy, and clarity that ground me every day.",
     story: (
       <>
         <p>Wellness is not simply something I teach; it is how I choose to live.</p>
@@ -47,13 +42,8 @@ const pillars: Pillar[] = [
         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
       </svg>
     ),
-    blurb: (
-      <>
-        <strong>Purpose becomes powerful when it is shared.</strong>
-        <br />
-        I use yoga, mindfulness, and service to empower women, support my community, and make wellbeing accessible to those who need it most.
-      </>
-    ),
+    blurb:
+      "I use yoga, mindfulness, and service to empower women, support my community, and make wellbeing accessible to those who need it most.",
     story: (
       <>
         <p>Giving back to my community has always been an important part of who I am.</p>
@@ -73,13 +63,8 @@ const pillars: Pillar[] = [
         <circle cx="9" cy="6" r="1.5" />
       </svg>
     ),
-    blurb: (
-      <>
-        <strong>The mountains challenge my limits and restore my perspective.</strong>
-        <br />
-        From Kilimanjaro to Everest Base Camp, every climb has strengthened my resilience and deepened my connection with nature.
-      </>
-    ),
+    blurb:
+      "From Kilimanjaro to Everest Base Camp, every climb has strengthened my resilience and deepened my connection with nature.",
     story: (
       <>
         <p>Mountaineering and trekking have taken me to some of the world’s most extraordinary landscapes, including Mount Kinabalu, Mount Kilimanjaro, and Everest Base Camp.</p>
@@ -98,13 +83,8 @@ const pillars: Pillar[] = [
         <path d="M12 2l2.39 6.96L22 10l-5.5 4.99L18 22l-6-3.6L6 22l1.5-7.01L2 10l7.61-1.04L12 2z" />
       </svg>
     ),
-    blurb: (
-      <>
-        <strong>I built Thrive4U to help women build lives on their own terms.</strong>
-        <br />
-        What began as a vision has grown into a global coaching practice centered on confidence, independence, and meaningful change.
-      </>
-    ),
+    blurb:
+      "What began as a vision has grown into a global coaching practice centered on confidence, independence, and meaningful change.",
     story: (
       <>
         <p>I founded Thrive4U from the ground up, transforming a personal vision into a global coaching practice focused on meaningful and lasting change.</p>
