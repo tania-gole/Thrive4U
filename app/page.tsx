@@ -68,7 +68,7 @@ export default function HomePage() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/thrive4u.coaching"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hero-social"
