@@ -796,7 +796,7 @@ section[id] { scroll-margin-top: 170px; }
   padding: 90px 0 100px;
 }
 .blog-inner {
-  max-width: 1080px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 48px;
   text-align: center;
@@ -879,10 +879,16 @@ section[id] { scroll-margin-top: 170px; }
 .blog-body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 14.5px;
-  line-height: 1.75;
+  line-height: 1.7;
   color: #3C2E18;
-  white-space: pre-line;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
+.blog-body p { margin: 0 0 8px; }
+.blog-body p:last-child { margin-bottom: 0; }
 .blog-tag {
   color: #C9900C;
   font-weight: 500;
@@ -891,8 +897,8 @@ section[id] { scroll-margin-top: 170px; }
   border-radius: 10px;
   overflow: hidden;
   background: #F2EBD8;
-  aspect-ratio: 16 / 9;
-  max-height: 220px;
+  aspect-ratio: 21 / 9;
+  max-height: 170px;
 }
 .blog-image img {
   width: 100%;

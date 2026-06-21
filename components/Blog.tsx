@@ -108,14 +108,25 @@ Coaches do you agree, and others, have you experienced this pause yet?
 ];
 
 function renderBody(body: string) {
-  const parts = body.split(/(#[A-Za-z0-9]+)/g);
-  return parts.map((part, i) =>
-    /^#[A-Za-z0-9]+$/.test(part) ? (
-      <span key={i} className="blog-tag">{part}</span>
-    ) : (
-      <span key={i}>{part}</span>
-    ),
-  );
+  const paragraphs = body
+    .split(/\n\s*\n/)
+    .map((p) => p.replace(/\s*\n\s*/g, " ").trim())
+    .filter(Boolean);
+
+  return paragraphs.map((para, pi) => {
+    const parts = para.split(/(#[A-Za-z0-9]+)/g);
+    return (
+      <p key={pi}>
+        {parts.map((part, i) =>
+          /^#[A-Za-z0-9]+$/.test(part) ? (
+            <span key={i} className="blog-tag">{part}</span>
+          ) : (
+            <span key={i}>{part}</span>
+          ),
+        )}
+      </p>
+    );
+  });
 }
 
 const PAGE_SIZE = 2;
