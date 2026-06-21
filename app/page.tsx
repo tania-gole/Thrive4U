@@ -44,9 +44,11 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <section id="home">
+        <div className="hero-banner">
+          <span className="hero-eyebrow">Sanah Singh Tomar</span>
+        </div>
         <div className="hero-left">
           <div className="hero-left-inner">
-            <span className="hero-eyebrow">Sanah Singh Tomar</span>
             <h1 className="hero-h1">Your transformation partner.</h1>
             <p className="hero-body">
               ICF Master Certified Coach (MCC) and EMCC Senior Practitioner,
