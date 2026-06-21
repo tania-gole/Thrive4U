@@ -1239,12 +1239,20 @@ section[id] { scroll-margin-top: 170px; }
   .hero-left, .hero-right {
     position: relative; width: 100%; height: auto;
     padding: 32px 24px;
+    justify-content: center;
   }
-  .hero-left { justify-content: center; padding-top: 32px; }
-  .hero-left-inner { padding: 0; }
+  .hero-left { padding-top: 32px; }
+  .hero-left-inner {
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hero-socials { justify-content: center; }
+  .hero-buttons { justify-content: center; }
   .hero-photo {
     max-width: 360px; height: auto;
     max-height: 52vh;
+    margin: 0 auto;
   }
 
   /* SECTIONS — pull padding in */
