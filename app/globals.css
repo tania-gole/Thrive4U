@@ -1364,6 +1364,7 @@ section[id] { scroll-margin-top: 170px; }
 
   .cred-row-2 { gap: 12px; }
   .cred-row-3 { gap: 12px; }
+  #contact { min-height: 0; padding: 56px 0 64px; }
   .cred-card-hero { padding: 18px 12px; gap: 10px; }
   .cred-card-hero img { width: 68px; height: 68px; }
   .cred-card-sm { padding: 14px 10px; gap: 8px; }
@@ -1383,10 +1384,19 @@ section[id] { scroll-margin-top: 170px; }
 }
 
 /* ───── Small phone (≤400px): smallest tweaks ───── */
+@media (max-width: 480px) {
+  .cred-row-2 { grid-template-columns: 1fr; }
+  .cred-card-hero { padding: 20px 18px; }
+  .cred-card-hero img { width: 76px; height: 76px; }
+}
+
 @media (max-width: 400px) {
   .nav { padding: 0 12px; }
   .nav-logo img { height: 82px; width: auto; }
   .hero-socials { gap: 10px; }
   .stats { gap: 16px; }
   .brand-cell img { height: 52px !important; max-width: 130px; }
+  .blog-nav { flex-wrap: wrap; gap: 10px; }
+  .blog-nav-btn { padding: 8px 12px; font-size: 10.5px; letter-spacing: 0.08em; }
+  .blog-dots { order: 3; flex-basis: 100%; justify-content: center; }
 }
