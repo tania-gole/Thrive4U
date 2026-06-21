@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 type Post = {
@@ -115,7 +118,13 @@ function renderBody(body: string) {
   );
 }
 
+const PAGE_SIZE = 2;
+
 export default function Blog() {
+  const [page, setPage] = useState(0);
+  const totalPages = Math.ceil(posts.length / PAGE_SIZE);
+  const visible = posts.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
+
   return (
     <section id="blog">
       <div className="blog-inner">
@@ -124,16 +133,16 @@ export default function Blog() {
           Notes on <em>coaching &amp; growth</em>
         </h2>
 
-        <div className="blog-grid stagger">
-          {posts.map((p) => (
+        <div className="blog-grid" key={page}>
+          {visible.map((p) => (
             <article className="blog-card" key={p.id}>
               <header className="blog-head">
                 <div className="blog-avatar">
                   <Image
                     src="/images/Headshot-Sanah.jpg"
                     alt="Sanah Singh Tomar"
-                    width={56}
-                    height={56}
+                    width={48}
+                    height={48}
                   />
                 </div>
                 <div className="blog-meta">
@@ -145,21 +154,53 @@ export default function Blog() {
                 </div>
               </header>
 
-              <div className="blog-body">{renderBody(p.body)}</div>
-
               {p.image && (
                 <div className="blog-image">
                   <Image
                     src={p.image}
                     alt=""
-                    width={1000}
-                    height={700}
-                    style={{ width: "100%", height: "auto", display: "block" }}
+                    width={800}
+                    height={500}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                   />
                 </div>
               )}
+
+              <div className="blog-body">{renderBody(p.body)}</div>
             </article>
           ))}
+        </div>
+
+        <div className="blog-nav">
+          <button
+            type="button"
+            className="blog-nav-btn"
+            onClick={() => setPage((p) => Math.max(0, p - 1))}
+            disabled={page === 0}
+            aria-label="Previous posts"
+          >
+            ← Previous
+          </button>
+          <div className="blog-dots" aria-hidden="true">
+            {Array.from({ length: totalPages }).map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                className={`blog-dot${i === page ? " is-active" : ""}`}
+                onClick={() => setPage(i)}
+                aria-label={`Go to page ${i + 1}`}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            className="blog-nav-btn"
+            onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+            disabled={page === totalPages - 1}
+            aria-label="Next posts"
+          >
+            Next →
+          </button>
         </div>
       </div>
     </section>
