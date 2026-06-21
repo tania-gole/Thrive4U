@@ -151,6 +151,7 @@ section[id] { scroll-margin-top: 170px; }
   display: block;
   margin-bottom: 14px;
   line-height: 1.05;
+  white-space: nowrap;
 }
 .hero-h1 {
   font-family: var(--font-cormorant), Georgia, serif;
