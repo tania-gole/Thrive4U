@@ -9,7 +9,7 @@ type Pillar = {
   icon: React.ReactNode;
   blurb: React.ReactNode;
   story: React.ReactNode;
-  image?: string;
+  images?: string[];
 };
 
 const pillars: Pillar[] = [
@@ -24,7 +24,7 @@ const pillars: Pillar[] = [
     ),
     blurb: (
       <>
-        <strong>I don’t simply teach wellbeing — I live it.</strong>
+        <strong>I don’t simply teach wellbeing. I live it.</strong>
         <br />
         Through yoga, meditation, mindful breathing, and conscious nutrition, I create the balance, energy, and clarity that ground me every day.
       </>
@@ -37,6 +37,7 @@ const pillars: Pillar[] = [
         <p>For me, wellness is not about perfection. It is about making thoughtful choices each day that bring me back to my center.</p>
       </>
     ),
+    images: ["/images/Wellness.jpeg", "/images/Wellness2.jpeg", "/images/Wellness3.jpeg"],
   },
   {
     id: "service",
@@ -61,6 +62,7 @@ const pillars: Pillar[] = [
         <p>Service reminds me that even small actions can create meaningful change. By sharing my knowledge and experience, I hope to help others recognise their own strength, develop greater self-belief, and move forward with purpose.</p>
       </>
     ),
+    images: ["/images/Service.jpeg", "/images/Service2.jpeg"],
   },
   {
     id: "mountains",
@@ -86,6 +88,7 @@ const pillars: Pillar[] = [
         <p>Every trek gives me the opportunity to step away from the noise of everyday life and return with renewed energy and clarity. In the mountains, I reconnect with nature, test my limits, and rediscover what truly matters.</p>
       </>
     ),
+    images: ["/images/Mountain1.jpeg", "/images/Mountain2.jpeg"],
   },
   {
     id: "founder",
@@ -178,15 +181,21 @@ export default function WholePerson() {
                 <path d="M6 6l12 12M18 6L6 18" />
               </svg>
             </button>
-            {active.image && (
-              <div className="wp-modal-image">
-                <Image
-                  src={active.image}
-                  alt={active.title}
-                  width={800}
-                  height={500}
-                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
-                />
+            {active.images && active.images.length > 0 && (
+              <div
+                className={`wp-modal-gallery wp-modal-gallery-${active.images.length}`}
+              >
+                {active.images.map((src, i) => (
+                  <div className="wp-modal-gallery-cell" key={src}>
+                    <Image
+                      src={src}
+                      alt={`${active.title} ${i + 1}`}
+                      width={600}
+                      height={600}
+                      style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                    />
+                  </div>
+                ))}
               </div>
             )}
             <div className="wp-modal-content">

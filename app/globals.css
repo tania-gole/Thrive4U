@@ -460,17 +460,49 @@ section[id] { scroll-margin-top: 170px; }
   color: #C9900C;
   transform: scale(1.05);
 }
-.wp-modal-image {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
+.wp-modal-gallery {
+  display: grid;
+  gap: 4px;
   background: #F2EBD8;
-  overflow: hidden;
 }
-.wp-modal-image img {
+.wp-modal-gallery-cell {
+  position: relative;
+  overflow: hidden;
+  background: #F2EBD8;
+}
+.wp-modal-gallery-cell img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+.wp-modal-gallery-1 {
+  grid-template-columns: 1fr;
+}
+.wp-modal-gallery-1 .wp-modal-gallery-cell {
+  aspect-ratio: 16 / 10;
+}
+.wp-modal-gallery-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.wp-modal-gallery-2 .wp-modal-gallery-cell {
+  aspect-ratio: 1 / 1;
+}
+.wp-modal-gallery-3 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+.wp-modal-gallery-3 .wp-modal-gallery-cell:first-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+}
+.wp-modal-gallery-3 .wp-modal-gallery-cell:not(:first-child) {
+  aspect-ratio: 1 / 1;
+}
+@media (max-width: 640px) {
+  .wp-modal-gallery-3 .wp-modal-gallery-cell:first-child {
+    aspect-ratio: 4 / 3;
+  }
 }
 .wp-modal-content {
   padding: 36px 36px 40px;
