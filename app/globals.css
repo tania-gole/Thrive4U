@@ -1352,6 +1352,10 @@ section[id] { scroll-margin-top: 170px; }
   .wp-card { padding: 28px 20px; }
   .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; }
   .brand-cell img { height: 60px !important; max-width: 150px; }
+  .brands-grid .brand-cell:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
 
   .hero-h1 { line-height: 1.2; white-space: normal; }
   .hero-eyebrow { white-space: normal; letter-spacing: 0.06em; }
