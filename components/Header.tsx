@@ -8,17 +8,10 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const hero = document.getElementById("home");
-    if (!hero) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setScrolled(!entry.isIntersecting),
-      // Treat the hero as "out" once less than half of it is in view, so
-      // the nav flips to white well before the smooth-scroll to a section
-      // link completes.
-      { threshold: 0, rootMargin: "-55% 0px 0px 0px" }
-    );
-    observer.observe(hero);
-    return () => observer.disconnect();
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
