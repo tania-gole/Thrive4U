@@ -36,11 +36,16 @@ section[id] { scroll-margin-top: 170px; }
   padding: 0 60px;
   background: transparent;
   border-bottom: 0.5px solid transparent;
-  transition: background 0.25s ease, border-color 0.25s ease;
+  /* Multiply blend over the hero gradient makes the JPEG logo's cream
+     background disappear. Once scrolled, swap to a solid white nav and
+     normal blending in the same frame so the logo's background never
+     shows. No transition — both flips happen instantly together. */
+  mix-blend-mode: multiply;
 }
 .nav.scrolled {
   background: #FFFFFF;
   border-bottom: 0.5px solid rgba(201, 144, 12, 0.2);
+  mix-blend-mode: normal;
 }
 .nav-logo {
   display: flex;
