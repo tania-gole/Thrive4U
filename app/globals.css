@@ -491,8 +491,9 @@ section[id] { scroll-margin-top: 170px; }
   font-size: 15px;
   line-height: 1.85;
   color: #4B3E25;
-  white-space: pre-line;
 }
+.wp-modal-body p { margin: 0 0 14px; }
+.wp-modal-body p:last-child { margin-bottom: 0; }
 @media (max-width: 640px) {
   .wp-modal-overlay { padding: 16px; }
   .wp-modal-content { padding: 28px 24px 32px; }
