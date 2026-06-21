@@ -39,6 +39,7 @@ export default function Header() {
           <li><a href="#about">About</a></li>
           <li><a href="#process">Process</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#blog">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
 
@@ -61,6 +62,7 @@ export default function Header() {
           <li><a href="#about" onClick={closeMenu}>About</a></li>
           <li><a href="#process" onClick={closeMenu}>Process</a></li>
           <li><a href="#testimonials" onClick={closeMenu}>Testimonials</a></li>
+          <li><a href="#blog" onClick={closeMenu}>Blog</a></li>
           <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
         </ul>
       </div>
