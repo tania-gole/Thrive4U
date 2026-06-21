@@ -212,8 +212,8 @@ section[id] { scroll-margin-top: 170px; }
   z-index: 2;
 }
 .hero-photo {
-  width: 100%; max-width: 380px;
-  height: 62%;
+  width: 100%; max-width: 520px;
+  height: 78%;
   object-fit: cover;
   object-position: center top;
   border-radius: 16px;
