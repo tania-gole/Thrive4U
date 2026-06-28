@@ -14,6 +14,37 @@ type Pillar = {
 
 const pillars: Pillar[] = [
   {
+    id: "founder",
+    title: "Founder of Thrive4U",
+    icon: (
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2l2.39 6.96L22 10l-5.5 4.99L18 22l-6-3.6L6 22l1.5-7.01L2 10l7.61-1.04L12 2z" />
+      </svg>
+    ),
+    blurb:
+      "What began as a vision has grown into a global coaching practice centered on confidence, independence, and meaningful change.",
+    story: (
+      <>
+        <p>I founded <strong>Thrive4U</strong> from a deeply held belief: that meaningful transformation begins when we have the courage to see ourselves clearly, challenge our limitations, and step into our fullest potential.</p>
+        <p>What began as a personal vision has evolved into a global executive coaching and wellbeing practice, partnering with C-suite leaders, high-potential talent, and women seeking greater confidence, clarity, and independence in their lives and careers.</p>
+        <p>Building Thrive4U has been a journey of courage, uncertainty, and reinvention. I have navigated difficult decisions, embraced change, balanced ambition with wellbeing, and continually evolved alongside the people I serve. Like many of my clients, I have experienced self-doubt, faced pivotal crossroads, and discovered that growth often asks us to let go of who we were to become who we are capable of being.</p>
+        <p>This is why I do not coach from theory alone.</p>
+        <p>I bring the lived experience of building, leading, adapting, and starting again. I understand the complexity of leadership, the pressure of high expectations, and the deeply human challenges that accompany success and change.</p>
+        <p>Through Thrive4U, I partner with my clients to:</p>
+        <ul>
+          <li>Lead with greater clarity, confidence, and authenticity</li>
+          <li>Navigate transitions and uncertainty with resilience</li>
+          <li>Break through limiting beliefs and self-imposed barriers</li>
+          <li>Strengthen their presence, influence, and impact</li>
+          <li>Create success that is both meaningful and sustainable</li>
+        </ul>
+        <p>At the heart of Thrive4U is a simple yet powerful belief: when people reconnect with who they truly are and lead from that place of authenticity, they don’t just transform their own lives—they create a ripple effect that transforms the people, teams, and communities around them.</p>
+        <p>My role is to hold up the mirror, ask the questions that matter, and create the space for lasting change.</p>
+        <p>Because thriving isn’t about becoming someone else. It’s about having the courage to become more fully yourself.</p>
+      </>
+    ),
+  },
+  {
     id: "wellness",
     title: "Wellness in Practice",
     icon: (
@@ -74,25 +105,6 @@ const pillars: Pillar[] = [
       </>
     ),
     images: ["/images/Mountain1.jpeg", "/images/Mountain2.jpeg"],
-  },
-  {
-    id: "founder",
-    title: "Founder of Thrive4U",
-    icon: (
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2l2.39 6.96L22 10l-5.5 4.99L18 22l-6-3.6L6 22l1.5-7.01L2 10l7.61-1.04L12 2z" />
-      </svg>
-    ),
-    blurb:
-      "What began as a vision has grown into a global coaching practice centered on confidence, independence, and meaningful change.",
-    story: (
-      <>
-        <p>I founded Thrive4U from the ground up, transforming a personal vision into a global coaching practice focused on meaningful and lasting change.</p>
-        <p>Building the business required me to navigate uncertainty, make difficult decisions, remain resilient, and continually grow alongside the people I serve. I have experienced many of the same challenges my clients face: balancing ambition and wellbeing, overcoming self-doubt, adapting to change, and finding the courage to move forward.</p>
-        <p>Through Thrive4U, I support women in recognising their strengths, finding their voice, and creating greater independence in both their professional and personal lives. My work is centered on helping women move beyond limiting beliefs, build confidence, and take intentional steps towards the future they want.</p>
-        <p>I do not coach from theory alone. I draw from the realities of building, leading, adapting, and starting again. Thrive4U reflects my belief that every woman deserves the confidence, freedom, and opportunity to become the author of her own life.</p>
-      </>
-    ),
   },
 ];
 
