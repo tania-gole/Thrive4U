@@ -525,6 +525,8 @@ section[id] { scroll-margin-top: 170px; }
 }
 .wp-modal-body p { margin: 0 0 14px; }
 .wp-modal-body p:last-child { margin-bottom: 0; }
+.wp-modal-body ul { margin: 0 0 14px; padding-left: 3.5em; }
+.wp-modal-body li { margin: 0 0 6px; }
 @media (max-width: 640px) {
   .wp-modal-overlay { padding: 16px; }
   .wp-modal-content { padding: 28px 24px 32px; }
