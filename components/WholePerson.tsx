@@ -58,18 +58,18 @@ const pillars: Pillar[] = [
       "Energy is the currency I exchange with the world — tending to it physically, mentally, emotionally, and spiritually is how I stay present.",
     story: (
       <>
-        <p>Wellness is not simply something I advocate; it is how I choose to live.</p>
-        <p>I believe that energy is the currency I exchange with the world. As a coach, the energy I bring into the room matters. It influences how deeply I listen, how present I am, the questions I ask, and the space I create for my clients to think, reflect, and grow.</p>
-        <p>That is why energy management is at the heart of my own well-being practice.</p>
-        <p>For me, holistic well-being means caring for the whole person—physical, mental, emotional, and spiritual. I have consciously invested in each of these dimensions over the past 15 years because I know that the quality of my energy directly impacts the quality of the work I do and I bring this expertise to the table for my clients as well.</p>
+        <p><strong>Wellness is not simply something I advocate; it is how I choose to live.</strong></p>
+        <p>I believe that <strong>energy is the currency I exchange with the world</strong>. As a coach, the energy I bring into the room matters. It influences how deeply I listen, how present I am, the questions I ask, and the space I create for my clients to think, reflect, and grow.</p>
+        <p>That is why <strong>energy management is at the heart of my own well-being practice</strong>.</p>
+        <p>For me, holistic well-being means caring for the whole person—<strong>physical, mental, emotional, and spiritual</strong>. I have consciously invested in each of these dimensions over the past 15 years because I know that the quality of my energy directly impacts the quality of the work I do and I bring this expertise to the table for my clients as well.</p>
         <p>Yoga, mindfulness, conscious breathing, and meditation are part of my daily rhythm. They help me slow down, reconnect with myself, and approach life with greater clarity, calm, and intention.</p>
         <p>I also prioritise daily movement and physical strength. Swimming, strength training, and staying active help me sustain the physical energy.</p>
         <p>I pay attention to what I consume, choosing nourishing food and content that supports my energy and well-being. I value sleep as much as I value productivity.</p>
-        <p>These practices keep me grounded through demanding moments and remind me to create space for stillness, reflection, recovery, and renewal.</p>
+        <p>These practices keep me grounded through demanding moments and remind me to create space for <strong>stillness, reflection, recovery, and renewal</strong>.</p>
         <p>I don’t believe wellness is about following a rigid formula. It is about becoming more aware of what gives you energy, what drains it, and what you need to do to return to your centre.</p>
         <p>This is the philosophy I bring into my coaching.</p>
-        <p>Together, we explore not just what you want to achieve, but how you want to feel while achieving it. Because sustainable performance, meaningful leadership, and a fulfilling life require more than managing time—they require managing the one resource you can never replenish: your energy.</p>
-        <p>Because when you manage your energy well, you don’t just perform better. You thrive.</p>
+        <p>Together, we explore not just <strong>what you want to achieve</strong>, but <strong>how you want to feel while achieving it</strong>. Because sustainable performance, meaningful leadership, and a fulfilling life require more than managing time—they require managing the one resource you can never replenish: <strong>your energy</strong>.</p>
+        <p><strong>Because when you manage your energy well, you don’t just perform better. You thrive.</strong></p>
       </>
     ),
     images: ["/images/Wellness.jpeg", "/images/Wellness2.jpeg", "/images/Wellness3.jpeg"],
