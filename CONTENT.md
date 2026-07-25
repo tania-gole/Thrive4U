@@ -1,7 +1,10 @@
 # Thrive4U — Website Content
 
 Use this doc to request edits. Just write what you want next to each field.
-**Bold text** below = description / current copy. *(Italic notes)* = format/length tips.
+**Bold text** = current copy. *(Italic notes)* = format/length tips.
+
+The site is a **single page**. The nav links jump down to sections rather than
+loading separate pages.
 
 ---
 
@@ -16,25 +19,30 @@ Use this doc to request edits. Just write what you want next to each field.
 
 ## 1. Top Navigation Bar
 
-| Link | Label |
-|---|---|
-| Link 1 | HOME |
-| Link 2 | ABOUT |
-| Link 3 | PROCESS |
-| Link 4 | TESTIMONIALS |
-| Link 5 | CONTACT |
+| Link | Label | Jumps to |
+|---|---|---|
+| Link 1 | HOME | Hero |
+| Link 2 | ABOUT | My story |
+| Link 3 | PROCESS | How we work together |
+| Link 4 | TESTIMONIALS | Stories of transformation |
+| Link 5 | BLOG | Notes on coaching & growth |
+| Link 6 | CONTACT | Ready to begin? |
+
+*(On phones these collapse into a hamburger menu.)*
 
 ---
 
-## 2. HOME (Hero Section)
+## 2. HOME (Hero)
 
 | Field | Current text |
 |---|---|
 | Eyebrow (above headline) | SANAH SINGH TOMAR |
-| Headline | Guiding you to your best self. |
-| Body paragraph | ICF Master Certified Coach (MCC) and EMCC Senior Practitioner, partnering with women leaders, high potentials, and C-suite executives for real, measurable transformation. |
-| Button 1 (gold) | Start your journey |
-| Button 2 (outline) | Learn more |
+| Headline | Your transformation partner. |
+| Body paragraph | ICF Master Certified Coach (MCC) and EMCC Senior Practitioner, partnering with leaders, high potentials and c-suite execs to create meaningful and measurable transformation — with a special passion for advocating women in leadership. |
+| Social icons | Email · Instagram · LinkedIn *(all live)* |
+| Button 1 (gold) | Start your journey *(jumps to Contact)* |
+| Button 2 (outline) | Learn more *(jumps to About)* |
+| Photo (right) | Headshot-Sanah.jpg |
 
 ---
 
@@ -43,22 +51,54 @@ Use this doc to request edits. Just write what you want next to each field.
 | Field | Current text |
 |---|---|
 | Eyebrow | MY STORY |
-| Headline | Every individual is unique. *(the word "unique." is the gold-highlighted word)* |
-| Paragraph 1 | I started my career in hotel operations with the Oberoi Group, learning early that people are at the heart of everything. That belief has never left me. |
+| Headline | Every individual is unique. *("unique." is the highlighted word)* |
+| Paragraph 1 | I started my career as a business leader, learning early that people are at the heart of everything. That belief has never left me. |
 | Paragraph 2 | Over 25 years, I've worked across HR, training, coaching and consulting, with organisations as varied as Google, McKinsey, BCG, Pfizer, Walt Disney, and the US Airforce, across the US, Europe, and Asia Pacific. |
-| Paragraph 3 | My work goes beyond surface-level goals. I engage the whole person, working inside out, uncovering patterns, challenging thinking, building behaviours that sustain performance in today's complex world. |
+| Paragraph 3 | My work goes beyond surface-level goals. I engage the whole person, working inside out, uncovering patterns, challenging thinking, building behaviours that sustain performance in today's rapidly changing and complex world. |
 | Button | Work with me |
 
 ---
 
-## 4. CREDENTIALS
+## 4. THE WHOLE PERSON
+
+Four cards. Each shows a short summary; **clicking a card opens the full story
+in a pop-up** with photos.
+
+| Field | Current text |
+|---|---|
+| Eyebrow | A FULLER PICTURE |
+| Headline | The whole person *(highlighted: "whole person")* |
+
+### Card 1 — Founder of Thrive4U
+- **Summary on card:** What began as a vision has grown into a global coaching practice centered on confidence, independence, and meaningful change.
+- **Full story covers:** founding Thrive4U, the journey of courage and reinvention, the five things she partners with clients on, the ripple effect
+- **Photo:** Founder1.jpeg
+
+### Card 2 — Wellness in Practice
+- **Summary on card:** Energy is the currency I exchange with the world — tending to it physically, mentally, emotionally, and spiritually is how I stay present.
+- **Full story covers:** energy management, holistic wellbeing across four dimensions, yoga and mindfulness, movement and strength, food and sleep, the coaching philosophy that follows from it
+- **Photos:** Wellness.jpeg, Wellness2.jpeg, Wellness3.jpeg
+
+### Card 3 — Service and contribution
+- **Summary on card:** From classrooms to soup kitchens, I share what I have learned to help women and my community find their own strength and possibility.
+- **Full story covers:** Robin Hood India, Willing Hearts Singapore, serving the women in her community, making wellbeing accessible
+- **Photos:** Service.jpeg, Service2.jpeg
+
+### Card 4 — The human behind the coach
+- **Summary on card:** Mum, partner, trekker, reader, dancer, dog lover — the many dimensions that keep me curious, grounded, and deeply human.
+- **Full story covers:** family, Tiger's Nest / Kinabalu / Kilimanjaro / Everest Base Camp / Rinjani, what the mountains taught her, books, music, dancing, dogs
+- **Photos:** Mountain1.jpeg, Mountain2.jpeg *(happy to swap in a family or dog photo — the card is about more than the treks now)*
+
+---
+
+## 5. CREDENTIALS
 
 | Field | Current text |
 |---|---|
 | Eyebrow | QUALIFICATIONS & ACCREDITATIONS |
-| Headline | Credentials that speak for themselves *(gold-highlighted: "speak for themselves")* |
+| Headline | Credentials that speak for themselves *(highlighted: "speak for themselves")* |
 
-### Top-row credentials (2 large badges)
+### Top row (2 large badges)
 
 **Badge 1 — ICF**
 - Tag: HIGHEST ICF LEVEL
@@ -70,43 +110,39 @@ Use this doc to request edits. Just write what you want next to each field.
 - Title: EMCC Senior Practitioner
 - Issuer: European Mentoring & Coaching Council
 
-### Bottom-row credentials (3 smaller badges)
+### Bottom row (3 smaller badges)
 
-**Badge 3 — Harvard**
-- Title: Lifestyle & Wellness Coaching
-- Issuer: Harvard Medical School
-
-**Badge 4 — CMA**
-- Title: Certified Master Coach
-- Issuer: Coach Masters Academy
-
-**Badge 5 — GCG**
-- Title: Certified Global Leadership Assessment Coach
-- Issuer: Global Coach Group
+| Badge | Title | Issuer |
+|---|---|---|
+| Harvard | Lifestyle & Wellness Coaching | Harvard Medical School |
+| CMA | Certified Master Coach | Coach Masters Academy |
+| GCG | Certified Global Leadership Assessment Coach | Global Coach Group |
 
 ### Stats row
 
 | Number | Label |
 |---|---|
 | 25+ | YEARS |
-| 6,500+ | COACHED |
+| 6500+ | COACHED AND TRAINED |
 | 5,000+ | HOURS |
 
-### Client logos strip
+---
+
+## 6. TRUSTED BY (client logos)
 
 | Field | Current text |
 |---|---|
 | Strip label | TRUSTED BY PROFESSIONALS AT |
-| Logos shown | Google, McKinsey, BCG, HSBC, EY, Accenture, Pfizer, Pepsi, Cisco, Intel, Dyson, LEGO, Walt Disney, American Express, Wells Fargo |
+| Logos shown | Google, McKinsey, BCG, HSBC, EY, Accenture, Pfizer, PepsiCo, Cisco, Intel, Dyson, LEGO, Walt Disney, American Express, Wells Fargo |
 
 ---
 
-## 5. PROCESS (How we work together)
+## 7. PROCESS (How we work together)
 
 | Field | Current text |
 |---|---|
 | Eyebrow | MY PROCESS |
-| Headline | How we work together *(gold-highlighted: "together")* |
+| Headline | How we work together *(highlighted: "together")* |
 
 ### The 4 pillars
 
@@ -131,88 +167,136 @@ Use this doc to request edits. Just write what you want next to each field.
 
 ---
 
-## 6. TESTIMONIALS
+## 8. TESTIMONIALS
+
+Side-scrolling carousel — drag it, or use the arrows. Longer testimonials show
+their opening on the card with **"Read full story"** to open the rest in a
+pop-up. The complete text of every one is on the site.
 
 | Field | Current text |
 |---|---|
 | Eyebrow | TESTIMONIALS |
-| Headline | Stories of transformation *(red-highlighted: "transformation")* |
+| Headline | Stories of transformation *(highlighted: "transformation")* |
 
-### Testimonials list (8 total)
+**11 testimonials, ordered newest first.** Each shows name, job title and the
+month it was written. Wording is exactly as each person wrote it on LinkedIn.
 
-**1. Robert Glick OBE** — VP, Head of International Public Affairs, American Express
-> Sanah's thoughtful and empathetic approach provided a safe space for exploring challenges, identifying strengths and strategising solutions. Her ability to listen deeply and ask incisive questions has helped me uncover fresh perspectives enabling more informed and confident decision-making in my leadership role.
+| # | Name | Title shown | Date |
+|---|---|---|---|
+| 1 | Boris Fournier | Mobile Software Engineering Manager, Digital Health | July 2026 |
+| 2 | Francois Krynauw | Head of Merchant Acquisition, American Express | July 2026 |
+| 3 | Jacquelyn Loi | Portfolio Manager, CVS Health | July 2026 |
+| 4 | M. Mushfiqur Rahman | Learning Experience & Talent Partner, Chevron | July 2026 |
+| 5 | Robert Glick OBE | VP, Head of International Public Affairs, American Express | June 2025 |
+| 6 | Tessa van Breugel | Public/Private Partnerships, AI Policy & Impact Investment | August 2024 |
+| 7 | Kalpesh R Parmar | General Manager, Mars Snacking Asia | May 2023 |
+| 8 | Sahana Bapu | Senior Program Manager, PMP & Lean Six Sigma Certified | May 2023 |
+| 9 | Vikas Dua | HR Head, Weber Shandwick | March 2020 |
+| 10 | Nigel Hughes | Leadership Transformation, Founder, Outstanding Global | May 2018 |
+| 11 | Vivek Arora | Theatre-based Soft Skills Learning, Artist | January 2014 |
 
-**2. Tessa van Breugel** — AI Strategy, Public/Private Partnerships
-> She helped me to set a clear vision for my career journey, reconnect with my purpose, and articulate my vision with confidence and clarity. Sanah asked powerful questions that prompted deep reflection and self-discovery. I made transformational progress thanks to Sanah challenging me to reconnect with my purpose and potential.
+*To add one, send the name, job title, date and the text — it sorts into place
+by date automatically. Titles are shortened from the full LinkedIn headline so
+they fit on one or two lines; say if you'd rather show more of any of them.*
 
-**3. Sahana Bapu** — Senior Program Manager, PMP & Lean Six Sigma Certified
-> She created a safe space for me to share my inhibitions and find my own answers at my pace without being judged or pressurised. Sanah's patience and the method of questioning helped me to confront my fears and deal with situations and feelings that I feared and pushed under the carpet.
-
-**4. Vikas Dua** — HR Head, Weber Shandwick
-> Getting coached by Sanah has been one of the smartest decisions I've made in recent times! She is really able to ask the right questions to enable me to dive inside myself and come up with the right answers. It's led me to a journey of self discovery that I'm sure I wouldn't have managed to traverse on my own.
-
-**5. Kalpesh R Parmar** — General Manager, Mars Snacking Asia
-> My coach and advisor in 2019. Thanks a lot for the humble and insightful sessions. Looking forward to working with you again.
-
-**6. Dr. Sunil Omanwar** — Leadership Development, Organisation Development
-> Sanah is a wonderful and highly skilled facilitator. She is thoroughly professional, straightforward and empathetic. I found her very insightful, a keen learner and a seeker, a rare dimension prevalent nowadays.
-
-**7. Nigel Hughes** — Leadership Transformation, Founder, Outstanding Global
-> Sanah is a woman of integrity, creativity and power. She knows how to listen, understand and empower others. You will enjoy her delightful company because she is incredibly sensitive, caring and loving, and knows how to help you create the results YOU want.
-
-**8. Vivek Arora** — Experiential Coach, Theatre-based Learning
-> Sanah is an authentic being with a well-rounded personality. Her sincerity and discipline to excellence is commendable. She brings commitment, vitality and integrity to her work. I would strongly recommend her for one-to-one performance coaching.
+*Note: Nigel Hughes was Sanah's mentor and Vivek Arora a colleague, rather than
+clients. Fine as they are, but flagging in case you'd want that distinction shown.*
 
 ---
 
-## 7. CONTACT
+## 9. BLOG (Notes on coaching & growth)
+
+Two posts shown at a time with Previous / Next. Clicking a post opens it in
+full. Hashtags are highlighted in gold automatically.
+
+| Field | Current text |
+|---|---|
+| Eyebrow | FROM THE JOURNAL |
+| Headline | Notes on coaching & growth *(highlighted: "coaching & growth")* |
+
+| # | Post opens with | Date shown | Image |
+|---|---|---|---|
+| 1 | "How can I stay relevant?" — don't be afraid to pivot | 1 week ago | Article1.jpeg |
+| 2 | "Is Sunday the right day to be on LinkedIn?" | 2 weeks ago | — |
+| 3 | "A lot of my clients ask me how I understand the world" — her books | 4 weeks ago | — |
+| 4 | The restored London telephone booth | 1 month ago | Article4.jpeg |
+
+> ⚠️ **These dates need attention.** They're written as fixed text — "1 week
+> ago", "2 weeks ago" and so on — which doesn't update itself. They were
+> accurate when the posts went up and are now out of date. Send the real posting
+> dates and they can either show as proper dates ("June 2026") or calculate the
+> "x weeks ago" automatically from then on.
+
+---
+
+## 10. CONTACT
 
 | Field | Current text |
 |---|---|
 | Eyebrow | CONTACT |
-| Headline | Ready to begin? *(gold-highlighted: "begin?")* |
+| Headline | Ready to begin? *(highlighted: "begin?")* |
 | CTA box title | Start your journey |
 | CTA box body | Take the first step towards the life you truly want. A single conversation can change everything. |
 | Button | Send me an email |
+| Below the button | or write to **sanahthrive4u@gmail.com** + a Copy button |
+
+*The address is shown in full with a Copy button because the button alone only
+opens a mail app on devices that have one set up. Plenty of people browse with
+webmail and no mail app, and would otherwise click the most important button on
+the site and get nothing at all.*
+
+> **Option not yet built:** a proper contact form (name, email, message) that
+> sends straight through, works on any device, and gives Sanah a record of every
+> enquiry. Needs a third-party sending service. Say the word.
 
 ---
 
-## 8. FOOTER
+## 11. FOOTER
 
 | Field | Current text |
 |---|---|
-| Logo (left) | Thrive4U logo |
-| Social icons (center) | Email · LinkedIn · Instagram |
+| Logo (left) | Thrive4U tree mark |
+| Social icons (centre) | Email · LinkedIn · Instagram |
 | Copyright (right) | © [auto-current-year] Thrive4U. All rights reserved. |
 
-### Linked accounts (currently non-clickable, but ready to switch on)
+### Linked accounts (all live)
 
 | Service | URL / Address |
 |---|---|
 | Email | sanahthrive4u@gmail.com |
 | LinkedIn | https://www.linkedin.com/in/sanahthrive4u/ |
-| Instagram | https://www.instagram.com *(no real handle yet — placeholder)* |
+| Instagram | https://www.instagram.com/thrive4u.coaching |
 
 ---
 
-## 9. Images (replaceable later)
+## 12. Images
 
 | Image | Where it appears |
 |---|---|
-| Logo (Thrive4U tree mark) | Nav bar, Footer, Process section |
-| Headshot of Sanah | Hero (right side), About background |
-| Cert badges (×5) | Credentials section |
-| Client logos (×15) | Marquee strip in Credentials section |
+| Logo (tree mark) | Nav bar, Footer, Process section |
+| Headshot of Sanah | Hero, Blog post avatars |
+| Founder1 | "Founder of Thrive4U" pop-up |
+| Wellness ×3 | "Wellness in Practice" pop-up |
+| Service ×2 | "Service and contribution" pop-up |
+| Mountain ×2 | "The human behind the coach" pop-up |
+| Cert badges ×5 | Credentials section |
+| Client logos ×15 | Trusted by strip |
+| Article1, Article4 | Blog posts |
 
 ---
 
 **How to use this doc:**
-1. Mark up the sections you want changed (red text, comments, however you like)
-2. Send it back to me
-3. I'll push the changes — site re-deploys in ~60 seconds
+1. Mark up the sections you want changed — however you like
+2. Send it back
+3. Changes get pushed and the site re-deploys in about a minute
 
 **Notes:**
-- Headlines have specific words highlighted in gold or red (marked with italics in this doc) — those colors are a design choice; if she wants different words emphasized, just say so.
-- Stats numbers (25+ / 6,500+ / 5,000+) are easy to bump as her milestones grow.
-- Testimonials can be added/removed in any quantity — the carousel adjusts.
+- Headlines have one phrase highlighted in gold or red. Those words are a design
+  choice — say if you'd rather emphasise something different.
+- Stats (25+ / 6500+ / 5,000+) are easy to bump as milestones grow.
+- Testimonials and blog posts can be added or removed in any number — the
+  carousel and pagination adjust themselves.
+- The four "Whole Person" card titles currently mix styles: two Title Case
+  ("Founder of Thrive4U", "Wellness in Practice") and two sentence case
+  ("Service and contribution", "The human behind the coach"). Worth settling on
+  one.
