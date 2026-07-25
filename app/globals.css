@@ -475,11 +475,26 @@ section[id] { scroll-margin-top: 170px; }
   object-fit: cover;
   display: block;
 }
+/* Single image — no crop. The founder portrait is a tall 9:16 frame, so
+   cropping it to a landscape band would cut off both her and the slide
+   behind her. Height is capped and the photo is centered on the gallery
+   backdrop like a framed plate; the cap also means the cell height is
+   identical before and after the image loads, so nothing shifts. */
 .wp-modal-gallery-1 {
   grid-template-columns: 1fr;
 }
 .wp-modal-gallery-1 .wp-modal-gallery-cell {
-  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 0;
+}
+.wp-modal-gallery-1 .wp-modal-gallery-cell img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 460px;
+  object-fit: contain;
 }
 .wp-modal-gallery-2 {
   grid-template-columns: 1fr 1fr;
@@ -502,6 +517,7 @@ section[id] { scroll-margin-top: 170px; }
   .wp-modal-gallery-3 .wp-modal-gallery-cell:first-child {
     aspect-ratio: 4 / 3;
   }
+  .wp-modal-gallery-1 .wp-modal-gallery-cell img { max-height: 340px; }
 }
 .wp-modal-content {
   padding: 36px 36px 40px;
@@ -759,6 +775,28 @@ section[id] { scroll-margin-top: 170px; }
   padding: 32px;
   width: 380px;
   flex-shrink: 0;
+  /* Cards stretch to the tallest in the row, so lay them out as a column and
+     pin the attribution to the bottom — otherwise shorter quotes leave their
+     name floating mid-card. */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  border: none;
+}
+.tcard-clickable {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.tcard-clickable:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(80, 30, 0, 0.12);
+}
+.tcard-clickable:focus-visible {
+  outline: 2px solid #C9900C;
+  outline-offset: 3px;
 }
 .tcard-q {
   font-family: Georgia, serif;
@@ -778,17 +816,117 @@ section[id] { scroll-margin-top: 170px; }
   font-style: italic;
   color: #3D2A00;
   margin-bottom: 20px;
+  /* Clamp so one very long recommendation can't stretch every card in the
+     row. Anything cut off is reachable via the modal. */
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.tcard-read-more {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #C9900C;
+  margin-bottom: 16px;
 }
 .tcard-name {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px; font-weight: 500;
   color: #8B1A1A;
+  margin-top: auto; /* pins name + role to the bottom of the stretched card */
 }
 .tcard-role {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 11px;
   color: #8B6914;
   margin-top: 2px;
+}
+.tcard-date {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  color: rgba(139, 105, 20, 0.7);
+  margin-top: 6px;
+}
+
+/* Testimonial modal — full text for the quotes that are clamped on the card */
+.test-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(30, 14, 0, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  animation: wp-overlay-in 0.25s ease both;
+}
+.test-modal {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  max-height: calc(100dvh - 64px);
+  overflow-y: auto;
+  background: linear-gradient(145deg, #FBF0D9, #F5E4C4);
+  border-radius: 18px;
+  box-shadow: 0 30px 80px rgba(30, 14, 0, 0.35);
+  animation: wp-modal-in 0.32s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+.test-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(201, 144, 12, 0.25);
+  color: #5A3A10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  z-index: 2;
+}
+.test-modal-close:hover {
+  background: #FFFFFF;
+  color: #C9900C;
+  transform: scale(1.05);
+}
+.test-modal-content {
+  padding: 40px 44px 36px;
+  text-align: left;
+}
+.test-modal-q { margin-bottom: 18px; }
+.test-modal-body {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.85;
+  font-style: italic;
+  color: #3D2A00;
+}
+.test-modal-body p { margin: 0 0 16px; }
+.test-modal-body p:last-child { margin-bottom: 0; }
+.test-modal-attrib {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(201, 144, 12, 0.3);
+}
+.test-modal-attrib .tcard-name { margin-top: 0; }
+@media (max-width: 640px) {
+  .test-modal-overlay { padding: 16px; }
+  .test-modal-content { padding: 32px 24px 28px; }
+  .test-modal-body { font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .test-modal-overlay, .test-modal { animation: none; }
 }
 
 /* ── BLOG ── */

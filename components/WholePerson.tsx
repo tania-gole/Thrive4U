@@ -43,6 +43,7 @@ const pillars: Pillar[] = [
         <p>Because thriving isn’t about becoming someone else. It’s about having the courage to become more fully yourself.</p>
       </>
     ),
+    images: ["/images/Founder1.jpeg"],
   },
   {
     id: "wellness",
@@ -54,54 +55,66 @@ const pillars: Pillar[] = [
       </svg>
     ),
     blurb:
-      "Through yoga, meditation, mindful breathing, and conscious nutrition, I create the balance, energy, and clarity that ground me every day.",
+      "Energy is the currency I exchange with the world — tending to it physically, mentally, emotionally, and spiritually is how I stay present.",
     story: (
       <>
-        <p>Wellness is not simply something I teach; it is how I choose to live.</p>
-        <p>Yoga, mindfulness, conscious breathing, and meditation are part of my daily routine. They help me slow down, reconnect with myself, and approach life with greater clarity, calm, and intention.</p>
-        <p>These practices keep me grounded during demanding moments and remind me to create space for stillness, reflection, and renewal. I also believe that nourishing the body is an essential part of caring for the mind. Eating well, moving regularly, and listening to what my body needs allow me to feel energised, balanced, and at my best.</p>
-        <p>For me, wellness is not about perfection. It is about making thoughtful choices each day that bring me back to my center.</p>
+        <p>Wellness is not simply something I advocate; it is how I choose to live.</p>
+        <p>I believe that energy is the currency I exchange with the world. As a coach, the energy I bring into the room matters. It influences how deeply I listen, how present I am, the questions I ask, and the space I create for my clients to think, reflect, and grow.</p>
+        <p>That is why energy management is at the heart of my own well-being practice.</p>
+        <p>For me, holistic well-being means caring for the whole person—physical, mental, emotional, and spiritual. I have consciously invested in each of these dimensions over the past 15 years because I know that the quality of my energy directly impacts the quality of the work I do and I bring this expertise to the table for my clients as well.</p>
+        <p>Yoga, mindfulness, conscious breathing, and meditation are part of my daily rhythm. They help me slow down, reconnect with myself, and approach life with greater clarity, calm, and intention.</p>
+        <p>I also prioritise daily movement and physical strength. Swimming, strength training, and staying active help me sustain the physical energy.</p>
+        <p>I pay attention to what I consume, choosing nourishing food and content that supports my energy and well-being. I value sleep as much as I value productivity.</p>
+        <p>These practices keep me grounded through demanding moments and remind me to create space for stillness, reflection, recovery, and renewal.</p>
+        <p>I don’t believe wellness is about following a rigid formula. It is about becoming more aware of what gives you energy, what drains it, and what you need to do to return to your centre.</p>
+        <p>This is the philosophy I bring into my coaching.</p>
+        <p>Together, we explore not just what you want to achieve, but how you want to feel while achieving it. Because sustainable performance, meaningful leadership, and a fulfilling life require more than managing time—they require managing the one resource you can never replenish: your energy.</p>
+        <p>Because when you manage your energy well, you don’t just perform better. You thrive.</p>
       </>
     ),
     images: ["/images/Wellness.jpeg", "/images/Wellness2.jpeg", "/images/Wellness3.jpeg"],
   },
   {
     id: "service",
-    title: "Service & Community",
+    title: "Service and contribution",
     icon: (
       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
       </svg>
     ),
     blurb:
-      "I use yoga, mindfulness, and service to empower women, support my community, and make wellbeing accessible to those who need it most.",
+      "From classrooms to soup kitchens, I share what I have learned to help women and my community find their own strength and possibility.",
     story: (
       <>
-        <p>Giving back to my community has always been an important part of who I am.</p>
-        <p>Through yoga, mindfulness, and acts of service, I create opportunities for people to experience greater calm, confidence, and connection in their lives. I regularly share yoga and wellbeing practices with members of my community, using what I have learned to support and uplift others.</p>
-        <p>I am especially passionate about empowering women and sharing practical knowledge with those who may not otherwise have access to these tools. Whether I am leading a yoga session, supporting women as they build their confidence, or offering guidance rooted in mindfulness, my intention is always to make wellbeing more inclusive and accessible.</p>
-        <p>Service reminds me that even small actions can create meaningful change. By sharing my knowledge and experience, I hope to help others recognise their own strength, develop greater self-belief, and move forward with purpose.</p>
+        <p>Contributing and giving back has always been an important part of who I am. I believe that the knowledge, skills, and experiences we gain become even more meaningful when we use them to uplift others.</p>
+        <p>Over the years, I have volunteered in many ways—from teaching underprivileged children and serving meals to displaced people through Robin Hood India, to volunteering at a soup kitchen with Willing Hearts in Singapore. Today, I continue to serve the women in my community—helpers, young women, and seniors—by sharing practical wellbeing practices and creating spaces for connection, reflection, and growth.</p>
+        <p>I am especially passionate about empowering women and making practical tools for wellbeing accessible to those who may not otherwise have access to them. Whether I am leading a yoga session or a hike, helping someone build confidence, or offering guidance rooted in mindfulness, my intention remains the same: to help people recognise their own strength and possibility.</p>
+        <p>Service continually reminds me that even small acts can create meaningful change. By sharing my knowledge, time, and experience, I hope to help others cultivate greater self-belief, nurture their wellbeing, and move forward with greater confidence, clarity, and purpose.</p>
       </>
     ),
     images: ["/images/Service.jpeg", "/images/Service2.jpeg"],
   },
   {
-    id: "mountains",
-    title: "Mountains & Movement",
+    id: "human",
+    title: "The human behind the coach",
     icon: (
       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 20l5.5-10 4 7 3-5L21 20H3z" />
-        <circle cx="9" cy="6" r="1.5" />
+        <circle cx="12" cy="12" r="10" />
+        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
       </svg>
     ),
     blurb:
-      "From Kilimanjaro to Everest Base Camp, every climb has strengthened my resilience and deepened my connection with nature.",
+      "Mum, partner, trekker, reader, dancer, dog lover — the many dimensions that keep me curious, grounded, and deeply human.",
     story: (
       <>
-        <p>Mountaineering and trekking have taken me to some of the world’s most extraordinary landscapes, including Mount Kinabalu, Mount Kilimanjaro, and Everest Base Camp.</p>
-        <p>Each journey has challenged me physically and mentally while offering a powerful sense of freedom, perspective, and connection. I love the experience of moving through nature, adapting to changing conditions, and taking each climb one step at a time.</p>
-        <p>The mountains demand patience, preparation, humility, and resilience. They remind me that progress is rarely achieved all at once; it is built through consistent effort, self-belief, and the willingness to continue when the path becomes difficult.</p>
+        <p>Being a devoted mum to two young adults and an equal partner to my husband has been a deeply meaningful part of my world. My family has shaped me in countless ways and continues to be one of my greatest sources of joy, learning, and perspective.</p>
+        <p>And then there is the part of me that feels most alive when I am outdoors.</p>
+        <p>My love for nature, adventure, and physical fitness has drawn me to hiking and trekking in some of the world’s most extraordinary landscapes. My journeys have taken me to Tiger’s Nest in Bhutan, Mount Kinabalu in Malaysia, Mount Kilimanjaro in Africa, Everest Base Camp in Nepal, and Mount Rinjani in Indonesia.</p>
+        <p>Every journey has challenged me physically and mentally while offering an incredible sense of freedom, perspective, and connection. I love the experience of moving through nature, adapting to changing conditions, and taking each climb one step—and one breath—at a time.</p>
+        <p>The mountains have taught me some of life’s most valuable lessons. They demand patience, preparation, humility, and resilience. They remind me that progress is rarely achieved all at once; it is built through consistent effort, self-belief, and the willingness to keep going when the path becomes difficult.</p>
         <p>Every trek gives me the opportunity to step away from the noise of everyday life and return with renewed energy and clarity. In the mountains, I reconnect with nature, test my limits, and rediscover what truly matters.</p>
+        <p>Beyond the mountains, I find joy in the simple things that make life rich—getting lost in a good book, listening to music, dancing with abandon, and spending time with dogs, with whom I seem to share an exceptional and rather effortless connection!</p>
+        <p>These are the many dimensions of who I am—mother, partner, adventurer, reader, dancer, dog lover, and lifelong student of life. They keep me curious, grounded, energised, and connected to the very human experience that I bring into my work with others.</p>
       </>
     ),
     images: ["/images/Mountain1.jpeg", "/images/Mountain2.jpeg"],
@@ -179,12 +192,14 @@ export default function WholePerson() {
               >
                 {active.images.map((src, i) => (
                   <div className="wp-modal-gallery-cell" key={src}>
+                    {/* Sizing/cropping is owned by .wp-modal-gallery-* in CSS
+                        so the single-image case can show a portrait uncropped. */}
                     <Image
                       src={src}
                       alt={`${active.title} ${i + 1}`}
                       width={600}
                       height={600}
-                      style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                      sizes="(max-width: 640px) 90vw, 600px"
                     />
                   </div>
                 ))}
