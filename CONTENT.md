@@ -79,12 +79,12 @@ in a pop-up** with photos.
 - **Full story covers:** energy management, holistic wellbeing across four dimensions, yoga and mindfulness, movement and strength, food and sleep, the coaching philosophy that follows from it
 - **Photos:** Wellness.jpeg, Wellness2.jpeg, Wellness3.jpeg
 
-### Card 3 — Service and contribution
+### Card 3 — Service and Contribution
 - **Summary on card:** From classrooms to soup kitchens, I share what I have learned to help women and my community find their own strength and possibility.
 - **Full story covers:** Robin Hood India, Willing Hearts Singapore, serving the women in her community, making wellbeing accessible
 - **Photos:** Service.jpeg, Service2.jpeg
 
-### Card 4 — The human behind the coach
+### Card 4 — The Human behind the Coach
 - **Summary on card:** Mum, partner, trekker, reader, dancer, dog lover — the many dimensions that keep me curious, grounded, and deeply human.
 - **Full story covers:** family, Tiger's Nest / Kinabalu / Kilimanjaro / Everest Base Camp / Rinjani, what the mountains taught her, books, music, dancing, dogs
 - **Photos:** Mountain1.jpeg, Mountain2.jpeg *(happy to swap in a family or dog photo — the card is about more than the treks now)*
@@ -277,8 +277,8 @@ the site and get nothing at all.*
 | Headshot of Sanah | Hero, Blog post avatars |
 | Founder1 | "Founder of Thrive4U" pop-up |
 | Wellness ×3 | "Wellness in Practice" pop-up |
-| Service ×2 | "Service and contribution" pop-up |
-| Mountain ×2 | "The human behind the coach" pop-up |
+| Service ×2 | "Service and Contribution" pop-up |
+| Mountain ×2 | "The Human behind the Coach" pop-up |
 | Cert badges ×5 | Credentials section |
 | Client logos ×15 | Trusted by strip |
 | Article1, Article4 | Blog posts |
@@ -296,7 +296,6 @@ the site and get nothing at all.*
 - Stats (25+ / 6500+ / 5,000+) are easy to bump as milestones grow.
 - Testimonials and blog posts can be added or removed in any number — the
   carousel and pagination adjust themselves.
-- The four "Whole Person" card titles currently mix styles: two Title Case
-  ("Founder of Thrive4U", "Wellness in Practice") and two sentence case
-  ("Service and contribution", "The human behind the coach"). Worth settling on
-  one.
+- The four "Whole Person" card titles are all Title Case, with short linking
+  words left lowercase: "Founder **of** Thrive4U", "Wellness **in** Practice",
+  "Service **and** Contribution", "The Human **behind the** Coach".
