@@ -237,13 +237,11 @@ full. Hashtags are highlighted in gold automatically.
 | Headline | Ready to begin? *(highlighted: "begin?")* |
 | CTA box title | Start your journey |
 | CTA box body | Take the first step towards the life you truly want. A single conversation can change everything. |
-| Button | Send me an email |
-| Below the button | or write to **sanahthrive4u@gmail.com** + a Copy button |
+| Button | Send me an email *(opens a mail app addressed to sanahthrive4u@gmail.com)* |
 
-*The address is shown in full with a Copy button because the button alone only
-opens a mail app on devices that have one set up. Plenty of people browse with
-webmail and no mail app, and would otherwise click the most important button on
-the site and get nothing at all.*
+*The button only opens a composer on devices with a mail app set up. Visitors on
+webmail get nothing when they click it — the address also appears in the hero
+strip and the footer, so it can still be copied by hand.*
 
 > **Option not yet built:** a proper contact form (name, email, message) that
 > sends straight through, works on any device, and gives Sanah a record of every

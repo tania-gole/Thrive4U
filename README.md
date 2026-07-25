@@ -20,7 +20,7 @@ In page order, each an anchor target:
 | `#process` | How we work together | Reflect / Root / Rise / Thrive + closing quote |
 | `#testimonials` | Stories of transformation | Drag/arrow carousel, long quotes open in a modal |
 | `#blog` | Notes on coaching & growth | 2-per-page pagination, posts open in a modal |
-| `#contact` | Ready to begin? | Mailto CTA plus the address with a copy control |
+| `#contact` | Ready to begin? | Mailto CTA button |
 
 ## Tech Stack
 | Tool | Purpose |
@@ -48,8 +48,7 @@ Thrive4U/
 │   ├── ScrollReveal.tsx        # One IntersectionObserver driving .reveal / .stagger
 │   ├── WholePerson.tsx         # Card + modal content for the 4 pillars
 │   ├── Testimonials.tsx        # Testimonial data, carousel, modal
-│   ├── Blog.tsx                # Post data, pagination, modal
-│   └── EmailCta.tsx            # Contact CTA with copyable address
+│   └── Blog.tsx                # Post data, pagination, modal
 ├── public/images/              # Photos, cert badges, client logos
 ├── CONTENT.md                  # Client-facing copy doc — keep in sync with the code
 └── README.md
@@ -72,7 +71,7 @@ Copy lives in the component or page that renders it:
 - **The whole person** — the `pillars` array in `components/WholePerson.tsx` (title, icon, card blurb, full story, images).
 - **Testimonials** — the `rawItems` array in `components/Testimonials.tsx`. Each entry takes a `date` (ISO `yyyy-mm-dd`) and the list sorts newest-first on its own, so new entries can go anywhere in the array. Bodies over `LONG_BODY` characters are clamped on the card and open in a modal; blank lines become paragraphs.
 - **Blog** — the `posts` array in `components/Blog.tsx`. `#hashtags` are styled automatically.
-- **Contact address** — the `EMAIL` constant in `components/EmailCta.tsx`. Also appears in `app/page.tsx` (hero icon) and `components/Footer.tsx`.
+- **Contact address** — three `mailto:` links, all needing the same edit: the hero icon and the contact CTA in `app/page.tsx`, plus `components/Footer.tsx`.
 
 `CONTENT.md` mirrors all of the above in plain language for the client to mark up. **Update it whenever copy changes** — it drifts easily.
 
