@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Blog from "@/components/Blog";
+import EmailCta from "@/components/EmailCta";
 import Testimonials from "@/components/Testimonials";
 import WholePerson from "@/components/WholePerson";
 
@@ -345,15 +346,7 @@ export default function HomePage() {
               Take the first step towards the life you truly want.
               <br />A single conversation can change everything.
             </p>
-            <a href="mailto:sanahthrive4u@gmail.com" className="btn-white">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-                  fill="#C9900C"
-                />
-              </svg>
-              Send me an email
-            </a>
+            <EmailCta />
           </div>
         </div>
       </section>
