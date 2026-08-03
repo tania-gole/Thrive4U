@@ -688,14 +688,15 @@ section[id] { scroll-margin-top: 170px; }
   border: 1.5px solid rgba(139, 26, 26, 0.18);
 }
 .pillar-icon {
-  color: #C9900C;
+  height: 72px;
+  display: flex; align-items: flex-end;
   margin-bottom: 4px;
 }
-.pillar-icon svg {
-  height: 52px; width: auto;
+.pillar-icon img {
+  height: 58px !important; width: auto !important;
   display: block;
 }
-.pillar-red .pillar-icon { color: #8B1A1A; }
+.pillar-icon-tall img { height: 72px !important; }
 .pillar-title {
   font-family: Georgia, serif;
   font-size: 24px; font-weight: 400;
