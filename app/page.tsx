@@ -3,6 +3,112 @@ import Blog from "@/components/Blog";
 import Testimonials from "@/components/Testimonials";
 import WholePerson from "@/components/WholePerson";
 
+const MirrorIcon = (
+  <svg
+    viewBox="0 0 64 60"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    aria-hidden="true"
+  >
+    <ellipse cx="32" cy="23" rx="14" ry="17" />
+    <ellipse cx="32" cy="23" rx="10" ry="13" strokeWidth="1" />
+    <path d="M27 14 C25 17 24.5 20 25 24" strokeWidth="1" />
+    <path d="M32 40 L32 50" />
+    <path d="M32 50 C36 51 36 57 32 58 C28 57 28 51 32 50" />
+    <path d="M28 3.5 C30 2 34 2 36 3.5" strokeWidth="1.2" />
+  </svg>
+);
+
+const RootsIcon = (
+  <svg
+    viewBox="0 0 64 60"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.6"
+    strokeLinecap="round"
+    aria-hidden="true"
+  >
+    <path d="M14 12 H50" strokeWidth="1.2" />
+    <path d="M32 12 C32 24 32 34 32 50" />
+    <path d="M32 14 C31 20 29 24 25 28 C21 32 19 38 18 45" />
+    <path d="M32 14 C33 20 35 24 39 28 C43 32 45 38 46 45" />
+    <path d="M27 26 C23 28 20 30 15 32" strokeWidth="1.2" />
+    <path d="M37 26 C41 28 44 30 49 32" strokeWidth="1.2" />
+    <path d="M32 32 C29 36 26 39 22 43" strokeWidth="1.2" />
+    <path d="M32 32 C35 36 38 39 42 43" strokeWidth="1.2" />
+    <path d="M20 36 C18 39 17 41 16 44" strokeWidth="1" />
+    <path d="M44 36 C46 39 47 41 48 44" strokeWidth="1" />
+  </svg>
+);
+
+const TreeIcon = (
+  <svg
+    viewBox="0 0 64 60"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.6"
+    strokeLinecap="round"
+    aria-hidden="true"
+  >
+    <path d="M29 58 C29.5 50 30.5 42 32 34" />
+    <path d="M35 58 C34.5 50 33.5 42 32 34" />
+    <path d="M29 52 C27.5 55 26 57 23.5 58" strokeWidth="1.2" />
+    <path d="M35 52 C36.5 55 38 57 40.5 58" strokeWidth="1.2" />
+    <path d="M32 34 C32 28 32 22 32 15" />
+    <path d="M32 34 C28 30 24 27 20 23" />
+    <path d="M32 34 C36 30 40 27 44 23" />
+    <path d="M32 32 C29 27 27 22 25 17" strokeWidth="1.3" />
+    <path d="M32 32 C35 27 37 22 39 17" strokeWidth="1.3" />
+    <path d="M32 34 C26 32.5 21 30.5 16.5 27.5" strokeWidth="1.2" />
+    <path d="M32 34 C38 32.5 43 30.5 47.5 27.5" strokeWidth="1.2" />
+    <g fill="currentColor" stroke="none">
+      <ellipse cx="29" cy="7" rx="2.7" ry="1.5" transform="rotate(-80 29 7)" />
+      <ellipse cx="35" cy="7" rx="2.7" ry="1.5" transform="rotate(80 35 7)" />
+      <ellipse cx="23.5" cy="9.5" rx="2.7" ry="1.5" transform="rotate(-60 23.5 9.5)" />
+      <ellipse cx="40.5" cy="9.5" rx="2.7" ry="1.5" transform="rotate(60 40.5 9.5)" />
+      <ellipse cx="18.5" cy="14" rx="2.7" ry="1.5" transform="rotate(-45 18.5 14)" />
+      <ellipse cx="45.5" cy="14" rx="2.7" ry="1.5" transform="rotate(45 45.5 14)" />
+      <ellipse cx="15" cy="19.5" rx="2.7" ry="1.5" transform="rotate(-25 15 19.5)" />
+      <ellipse cx="49" cy="19.5" rx="2.7" ry="1.5" transform="rotate(25 49 19.5)" />
+      <ellipse cx="13.5" cy="25" rx="2.5" ry="1.4" transform="rotate(-8 13.5 25)" />
+      <ellipse cx="50.5" cy="25" rx="2.5" ry="1.4" transform="rotate(8 50.5 25)" />
+      <ellipse cx="26" cy="14.5" rx="2.5" ry="1.4" transform="rotate(-70 26 14.5)" />
+      <ellipse cx="38" cy="14.5" rx="2.5" ry="1.4" transform="rotate(70 38 14.5)" />
+      <ellipse cx="21" cy="19" rx="2.5" ry="1.4" transform="rotate(-45 21 19)" />
+      <ellipse cx="43" cy="19" rx="2.5" ry="1.4" transform="rotate(45 43 19)" />
+      <ellipse cx="18.5" cy="24.5" rx="2.5" ry="1.4" transform="rotate(-15 18.5 24.5)" />
+      <ellipse cx="45.5" cy="24.5" rx="2.5" ry="1.4" transform="rotate(15 45.5 24.5)" />
+      <ellipse cx="32" cy="12" rx="2.7" ry="1.5" transform="rotate(-90 32 12)" />
+      <ellipse cx="27.5" cy="20" rx="2.4" ry="1.3" transform="rotate(-60 27.5 20)" />
+      <ellipse cx="36.5" cy="20" rx="2.4" ry="1.3" transform="rotate(60 36.5 20)" />
+      <ellipse cx="24" cy="25" rx="2.4" ry="1.3" transform="rotate(-30 24 25)" />
+      <ellipse cx="40" cy="25" rx="2.4" ry="1.3" transform="rotate(30 40 25)" />
+    </g>
+  </svg>
+);
+
+const HorseIcon = (
+  <svg
+    viewBox="0 0 64 60"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.7"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M27 16 C33 11 40 14 44 22 C46 26 48.5 29.5 51.5 32.5 C53 34 52.7 36 50.7 36.6 L48.5 37.2 C49 40 47.8 42.6 44.8 43 C42.3 43.4 40.6 42 39.6 40.2 C35.5 41.6 31 40.5 28.2 37.2" />
+    <path d="M31 15 L34 8 L37.5 14" />
+    <circle cx="36.5" cy="22.5" r="1.5" fill="currentColor" stroke="none" />
+    <path d="M49.3 33.3 C50 34 50 34.9 49.3 35.4" strokeWidth="1.2" />
+    <path d="M27 16 C19 18 14 24 13.5 32 C13 39 15 45 14 52" />
+    <path d="M29 20 C23 23 20 28 19.5 35 C19.2 40 20.5 44 20 49" strokeWidth="1.2" />
+    <path d="M27.5 38 C26 43 24.5 48 24.5 54" strokeWidth="1.4" />
+  </svg>
+);
+
 const clientLogos = [
   { src: "/images/Google-Logo.webp", alt: "Google" },
   { src: "/images/McKinsey-Logo.png", alt: "McKinsey" },
@@ -278,6 +384,7 @@ export default function HomePage() {
 
           <div className="pillars stagger">
             <div className="pillar">
+              <div className="pillar-icon">{MirrorIcon}</div>
               <div className="pillar-title">Reflect</div>
               <div className="pillar-body">
                 We begin by holding up a mirror. Uncovering your patterns,
@@ -286,6 +393,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="pillar pillar-red">
+              <div className="pillar-icon">{RootsIcon}</div>
               <div className="pillar-title">Root</div>
               <div className="pillar-body">
                 We go deep. Identifying your values, strengths, and the core
@@ -294,6 +402,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="pillar">
+              <div className="pillar-icon">{TreeIcon}</div>
               <div className="pillar-title">Rise</div>
               <div className="pillar-body">
                 We build upward. Developing new habits, behaviours, and ways of
@@ -302,6 +411,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="pillar pillar-red">
+              <div className="pillar-icon">{HorseIcon}</div>
               <div className="pillar-title">Thrive</div>
               <div className="pillar-body">
                 We move. With clarity, confidence, and intention, you step
