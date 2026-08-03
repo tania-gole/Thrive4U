@@ -282,8 +282,8 @@ export default function HomePage() {
                 <Image
                   src="/images/pillar-mirror.png"
                   alt=""
-                  width={534}
-                  height={577}
+                  width={240}
+                  height={330}
                 />
               </div>
               <div className="pillar-title">Reflect</div>

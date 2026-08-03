@@ -689,7 +689,7 @@ section[id] { scroll-margin-top: 170px; }
 }
 .pillar-icon {
   height: 72px;
-  display: flex; align-items: flex-end;
+  display: flex; align-items: flex-end; justify-content: center;
   margin-bottom: 4px;
 }
 .pillar-icon img {
